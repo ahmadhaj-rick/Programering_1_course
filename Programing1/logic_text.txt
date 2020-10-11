@@ -1,0 +1,43 @@
+﻿
+
+
+while (varible != 0 )
+{
+  do the Switch > case
+
+  as long as the user dont input 0 the while should loop us inside the switch case code.
+   use the varible = 0 as an exit door  
+     
+}
+
+
+int main_option = 1;
+while (main_option != 0)
+{
+ wrtie the code for the Main_Menu here
+
+    varible console.read/console.write
+    switch(main_options)
+        case 1: sub_menu 1
+            int option1 = 1;
+            while(option1 != 0)
+            {
+                code for the sub_menu 1
+                the while menu here as long as the user dont input 0, it should
+                loop us inside case one code.
+                while using 0 to break this sub while-loop and go back the parent while loop
+
+    
+            }
+
+}
+
+can i do this neater ??????????
+
+the while loop nesting seems a bit messy!!!!!!!
+
+
+    int option1
+    int option2
+    int optionx
+ 
