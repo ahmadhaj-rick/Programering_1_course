@@ -10,9 +10,9 @@ namespace Programming1
             **/
             Console.WriteLine("Please Enter Two numbers to compare and find the lowest vaule: ");
 
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            double num1 = Convert.ToDouble(Console.ReadLine());
 
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            double num2 = Convert.ToDouble(Console.ReadLine());
 
             if (num1 > num2)
             {
@@ -38,13 +38,15 @@ namespace Programming1
           Console.WriteLine("Please Enter Three numbers to compare and find the lowest vaule: ");
 
             // Storing input 
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            double num1 = Convert.ToDouble(Console.ReadLine());
 
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            double num2 = Convert.ToDouble(Console.ReadLine());
 
-            int num3 = Convert.ToInt32(Console.ReadLine());
+            double num3 = Convert.ToDouble(Console.ReadLine());
 
-            // if statemnts section 
+            // if statemnts section
+
+            // Change the logic to not use the && opreator instead nested IF
             if (num1 < num2 && num1 < num3)
             {
                 Console.WriteLine("The lowest vaule is: " + num1);
@@ -90,11 +92,11 @@ namespace Programming1
             Console.WriteLine("Enter three Number to see how Zeros is there");
 
             // Storing input 
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            double num1 = Convert.ToDouble(Console.ReadLine());
 
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            double num2 = Convert.ToDouble(Console.ReadLine());
 
-            int num3 = Convert.ToInt32(Console.ReadLine());
+            double num3 = Convert.ToDouble(Console.ReadLine());
 
             //if statment for if equals zero
             if ((num1 == 0) && (num2 == 0) && (num3 == 0))
@@ -164,12 +166,14 @@ namespace Programming1
             Console.WriteLine("Enter the ages of the three kids to findout who is " +
                     "the oldest and the diffrence between the oldest and the youngest");
 
-            int child1 = Convert.ToInt32(Console.ReadLine());
-            int child2 = Convert.ToInt32(Console.ReadLine());
-            int child3 = Convert.ToInt32(Console.ReadLine());
-            int Oldest;
-            int Young;
+            double child1 = Convert.ToDouble(Console.ReadLine());
+            double child2 = Convert.ToDouble(Console.ReadLine());
+            double child3 = Convert.ToDouble(Console.ReadLine());
+            double Oldest;
+            double Young;
             //Figuring out the Oldest [IF Statments]
+
+            // Change the logic to not use the && opreator instead nested IF
             if (child1 > child2 && child1 > child3)
             {
                 Console.WriteLine("The Oldest  is: " + child1);
@@ -188,6 +192,7 @@ namespace Programming1
 
             //Figuring out the youngest
 
+            // Change the logic to not use the && opreator instead nested IF
             if (child1 < child2 && child1 < child3)
             {
                 // Console.WriteLine("The Youngest  is: " + child1);
@@ -205,7 +210,7 @@ namespace Programming1
             }
 
             // Figuring out the Difference between oldest and youngest
-            int Diff;
+            double Diff;
             Diff = Oldest - Young;
 
             Console.WriteLine("The Age Differenec Between the Oldest and Youngest is:  "
@@ -267,6 +272,7 @@ namespace Programming1
             // Figure out first Place student ( Highest Value)
 
 
+            // Change the logic to not use the && opreator instead nested IF 
             if (grade1 > grade2 && grade1 > grade3)
             {
                 Console.WriteLine("First Place Student is: " + " " + student1);
@@ -395,7 +401,7 @@ namespace Programming1
             {
                 Console.WriteLine("The Number entered is Even");
             }
-            else if (num % 2 != 0)
+            else if (num % 2 != 0) // Change the logic you dont need this Else If there is only 1 or 0 states 
             {
                 Console.WriteLine("The number enter is Odd");
             }
