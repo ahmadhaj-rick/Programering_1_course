@@ -46,14 +46,23 @@ namespace Programming1
 
             // if statemnts section
 
-            // Change the logic to not use the && opreator instead nested IF
-            if (num1 < num2 && num1 < num3)
+            if (num1 < num2)
             {
-                Console.WriteLine("The lowest vaule is: " + num1);
+                if (num1 < num3)
+                {
+
+                    Console.WriteLine("The lowest vaule is: " + num1);
+
+                }
             }
-            else if (num2 < num1 && num2 < num3)
+            else if (num2 < num1)
             {
-                Console.WriteLine("The lowest Value is: " + num2);
+                if (num2 < num3)
+                {
+
+                    Console.WriteLine("The lowest Value is: " + num2);
+
+                }
             }
             else
             {
@@ -169,20 +178,31 @@ namespace Programming1
             double child1 = Convert.ToDouble(Console.ReadLine());
             double child2 = Convert.ToDouble(Console.ReadLine());
             double child3 = Convert.ToDouble(Console.ReadLine());
-            double Oldest;
-            double Young;
+            double Oldest = 0;
+            double Young = 0;
+            double Diff;
             //Figuring out the Oldest [IF Statments]
 
-            // Change the logic to not use the && opreator instead nested IF
-            if (child1 > child2 && child1 > child3)
+            if (child1 > child2)
             {
-                Console.WriteLine("The Oldest  is: " + child1);
-                Oldest = child1;
+                if (child1 > child3)
+                {
+
+                    Console.WriteLine("The Oldest  is: " + child1);
+                    Oldest = child1;
+
+                }
+
             }
-            else if (child2 > child1 && child2 > child3)
+            else if (child2 > child1)
             {
-                Console.WriteLine("The Oldest  is: " + child2);
-                Oldest = child2;
+                if (child2 > child3)
+                {
+
+                    Console.WriteLine("The Oldest  is: " + child2);
+                    Oldest = child2;
+
+                }
             }
             else
             {
@@ -192,25 +212,34 @@ namespace Programming1
 
             //Figuring out the youngest
 
-            // Change the logic to not use the && opreator instead nested IF
-            if (child1 < child2 && child1 < child3)
+            if (child1 < child2)
             {
-                // Console.WriteLine("The Youngest  is: " + child1);
-                Young = child1;
+                if (child1 < child3)
+                {
+
+                    Console.WriteLine("The Youngest  is: " + child1);
+                    Young = child1;
+
+                }
             }
-            else if (child2 < child1 && child2 < child3)
+            else if (child2 < child1)
             {
-                // Console.WriteLine("The Youngest is: " + child2);
-                Young = child2;
+                if (child2 < child3)
+                {
+
+                    Console.WriteLine("The Youngest is: " + child2);
+                    Young = child2;
+
+                }
             }
             else
             {
-                // Console.WriteLine("The Youngest is:  " + child3);
+                Console.WriteLine("The Youngest is:  " + child3);
                 Young = child3;
             }
 
             // Figuring out the Difference between oldest and youngest
-            double Diff;
+            
             Diff = Oldest - Young;
 
             Console.WriteLine("The Age Differenec Between the Oldest and Youngest is:  "
@@ -271,16 +300,23 @@ namespace Programming1
 
             // Figure out first Place student ( Highest Value)
 
-
-            // Change the logic to not use the && opreator instead nested IF 
-            if (grade1 > grade2 && grade1 > grade3)
+            if (grade1 > grade2)
             {
-                Console.WriteLine("First Place Student is: " + " " + student1);
+                if (grade1 > grade3)
+                {
 
+                    Console.WriteLine("First Place Student is: " + " " + student1);
+
+                }
             }
-            else if (grade2 > grade1 && grade2 > grade3)
+            else if (grade2 > grade1)
             {
-                Console.WriteLine("First Place Student is: " + " " + student2);
+                if (grade2 > grade3)
+                {
+
+                    Console.WriteLine("First Place Student is: " + " " + student2);
+
+                }
             }
             else
             {
@@ -324,14 +360,23 @@ namespace Programming1
 
             // Figure out thired place student (Lowest Value)
 
-            if (grade1 < grade2 && grade1 < grade3)
+            if (grade1 < grade2)
             {
-                Console.WriteLine("Third Place Student is: " + "" + student1);
+                if ( grade1 < grade3)
+                {
 
+                    Console.WriteLine("Third Place Student is: " + "" + student1);
+
+                }
             }
-             else if (grade2 < grade1 && grade2 < grade3)
+            else if (grade2 < grade1)
             {
+                if (grade2 < grade3)
+                {
+
                     Console.WriteLine("Thrid Place Student is: " + "" + student2);
+
+                }
             }
             else
             {
@@ -401,13 +446,9 @@ namespace Programming1
             {
                 Console.WriteLine("The Number entered is Even");
             }
-            else if (num % 2 != 0) // Change the logic you dont need this Else If there is only 1 or 0 states 
-            {
-                Console.WriteLine("The number enter is Odd");
-            }
             else
             {
-                Console.WriteLine("Erorr, You done did Fucked up ");
+                Console.WriteLine("The number enter is Odd");
             }
 
         }
