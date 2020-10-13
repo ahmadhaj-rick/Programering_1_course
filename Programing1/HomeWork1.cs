@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Programming1
+namespace Programing1
 {
     public class HomeWork1
     {
