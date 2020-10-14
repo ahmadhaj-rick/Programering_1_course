@@ -105,15 +105,16 @@ namespace Programing1
             /**
             4.Skriv ett program som listar de N första talen i Fibonacci serien
             **/
-
             /**
             the logic is the sequnce start with 0 and then 1, those two number are
             then added so 0 + 1 = 1 > 1 + 1 = 2 > 1 + 2 = 3 > 2 + 3 = 5 > 3 + 5
             so after starting the Sequenc by adding 0 and 1
             we add last number with the new result.
+            we need two num varibles and num3/result to store the addition then 
+            we swap value of num2 into num1 and num3/result into num2 then loop the addition ?????
+            put this into a loop using [counter < (N)] some how ???
             **/
 
-            // put this into a loop using counter (N) some how ???
             int num1 = 0;
             int num2 = 1;
             int num3;
@@ -123,16 +124,13 @@ namespace Programing1
             Console.Write("This is the Fibonacci Numbers\n");
             Console.Write(num1 + " " + num2 + " ");
 
-            for (int counter = 0; counter <= n; counter++)
+            for (int counter = 0; counter < n; counter++)
             {
                 num3 = num1 + num2;
                 num1 = num2;
-                num2 =num3;
-                // Console.WriteLine("The new value for Number2 " + num2);
-                // Console.WriteLine("The new Value for Number1 " + num1);
+                num2 = num3;
 
                 Console.Write(num3 + " ");
-
             }
         }
 
