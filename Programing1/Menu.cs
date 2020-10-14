@@ -8,9 +8,6 @@ namespace HomeWorkMenu
             int Main_option = 1;
             while (Main_option != 0) //While Loop Main Menu.
             {
-
-
-                // Console.WriteLine("Choose an Opetion to execute! ");
                 Console.WriteLine("\n" +
                                   "Welcome To this Little Project Made By ..... \n" +
                                   "This Project is made for Programing 1 Course. \n" +
@@ -43,6 +40,9 @@ namespace HomeWorkMenu
                     "3- Loops For/While  -> 1- Start, Step and Stop\n" +
                     "                    -> 2- Counting up to the number inputed\n" +
                     "                    -> 3- Counting up to the number inputed,Check dividable by 3 & 7\n" +
+                    "                    -> 4- Printing the (N) numbers of the Fibonacci Sequence\n" +
+                    "" +
+                    "" +
                     "\n" +
                     "4- Methods          -> 1- ....Work in Progress\n" +
                     "                    -> 2- ....Work in Progress\n" +
@@ -50,6 +50,7 @@ namespace HomeWorkMenu
                     "5-Vectors And Lists -> 1- ....Work in Progress\n" +
                     "                    -> 2- ....Work in PRogress\n");
 
+                Console.WriteLine("Enter An Opetion: .....");
                 Main_option = Convert.ToInt16(Console.ReadLine());
 
                 // Menu and Sub-Menu To choose which home work to execute!
@@ -272,9 +273,14 @@ namespace HomeWorkMenu
                                     Programing1.HomeWork3.FibonacciSequence();
 
                                     break;
+                                case 5:
+                                    Console.WriteLine("You Are At ->   "+ "\n");
+
+
+                                    break;
 
                                 default:
-                                    Console.WriteLine("You have Entered an invalid Choice! ");
+                                    Console.WriteLine("Back To Main Menu.\n");
                                     // Menu.Main(); try to bring back the user to start of the
                                     // program to input a valid choice !!!
                                     break;
@@ -290,7 +296,7 @@ namespace HomeWorkMenu
                         break; // End Third HomeWork Section - Main Menu (3)
 
                     default: // Default HomeWork Section - Main Menu (Default)
-                        Console.WriteLine("You have Entered an invalid Choice! ");
+                        Console.WriteLine("Back To Main Menu.\n");
 
                         break; // End Default HomeWork Section - Main Menu (Default)
 
