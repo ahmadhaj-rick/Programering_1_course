@@ -41,7 +41,7 @@ namespace HomeWorkMenu
                     "                    -> 2- Counting up to the number inputed\n" +
                     "                    -> 3- Counting up to the number inputed,Check dividable by 3 & 7\n" +
                     "                    -> 4- Printing the (N) numbers of the Fibonacci Sequence\n" +
-                    "" +
+                    "                    -> 5- Checking if a Whole number is Prime?\n" +
                     "" +
                     "\n" +
                     "4- Methods          -> 1- ....Work in Progress\n" +
@@ -247,6 +247,7 @@ namespace HomeWorkMenu
                                               "                    -> 2- Counting up to the number inputed\n" +
                                               "                    -> 3- Counting up to the number inputed,Check dividable by 3 & 7\n" +
                                               "                    -> 4- Printing the (N) numbers of the Fibonacci Sequence\n" +
+                                              "                    -> 5- Checking if a Whole number is Prime?" +
                                               "\n");
 
                             Option_3 = Convert.ToInt16(Console.ReadLine());
@@ -274,8 +275,8 @@ namespace HomeWorkMenu
 
                                     break;
                                 case 5:
-                                    Console.WriteLine("You Are At ->   "+ "\n");
-
+                                    Console.WriteLine("You Are At -> 5 - Checking if a Whole number is Prime ?" + "\n");
+                                    Programing1.HomeWork3.PrimeCheck();
 
                                     break;
 
