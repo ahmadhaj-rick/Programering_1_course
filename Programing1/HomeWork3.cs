@@ -134,7 +134,7 @@ namespace Programing1
             }
         }
 
-        public static void PrimeCheck()
+        public static void PrimeCheck() //4.5
         {
             /**
             5.Skriv ett program som undersöker om ett heltal är ett primtal eller inte.
@@ -164,7 +164,7 @@ namespace Programing1
 
                 for (int counter = 2; counter < num; counter++)
                 {
-                    if (num % counter == 0) return false;
+                    if (num % counter == 0) { return false; }
                 }
 
                 return true;
