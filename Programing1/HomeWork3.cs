@@ -134,6 +134,113 @@ namespace Programing1
             }
         }
 
+        public static void PrimeCheck()
+        {
+            /**
+            5.Skriv ett program som undersöker om ett heltal är ett primtal eller inte.
+            Du måste alltså undersöka om det finns något tal mellan 1 och heltalet
+            som ger en jämn division med heltalet.Om det finns en jämn division så är heltalet inte ett primtal.
+            Tips: Använd operatorn %.
+            **/
+
+            Console.WriteLine("Enter a Whole number to check if its prime or not: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (IsPrime(num))
+            {
+                Console.WriteLine("The Number entered is Prime");
+            }
+            else
+            {
+                Console.WriteLine("The number is not Prime");
+            }
+
+
+            static bool IsPrime(int num)
+            {
+                if (num == 0) { return false; }
+                if (num == 1) { return false; }
+                if (num == 2) { return true; }
+
+                for (int counter = 2; counter < num; counter++)
+                {
+                    if (num % counter == 0) return false;
+                }
+
+                return true;
+            }
+
+
+            // move all the comments under to legacy code file. 
+
+            /** bool method template 
+            private bool CheckAll()
+            {
+                if (....)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            **/
+
+            /** use this logic to get true or false output or result!
+            for (int counter = 2; counter < num; counter++)
+            {
+
+
+                if (num == 0)
+                {
+                    Console.WriteLine("The number Zero is not Prime");
+                }
+                if (num == 1)
+                {
+                    Console.WriteLine("Number One is not Prime!");
+                }
+                if (num == 2)
+                {
+                    Console.WriteLine("Number 2 is Prime!");
+                }
+                if (counter != num && num % counter != 0 )
+                {
+                    Console.WriteLine(num + " / " + counter + " is not equaly divided!");
+                    Console.WriteLine("Checking next number....");
+                    //break; // not dividable then our check is > true 
+                }
+                else
+                {
+                    Console.WriteLine(num + " / " + counter + "gives an Equal number!");
+                    Console.WriteLine(num + "is not a prime number!");
+                    //break;
+                }
+
+            }
+            **/
+
+
+
+
+
+
+            /**
+               else
+                    {
+                        Console.WriteLine(num + " / " + counter + "gives an Equal number!");
+                        Console.WriteLine(num + "is not a prime number!");
+                        counter = 0;
+                    } 
+             
+            
+            **/
+
+        }
+
+
+
+
+
+
 
 
         public HomeWork3()
