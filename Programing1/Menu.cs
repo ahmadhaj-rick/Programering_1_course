@@ -275,9 +275,13 @@ namespace HomeWorkMenu
 
                                     break;
                                 case 5:
-                                    Console.WriteLine("You Are At -> 5 - Checking if a Whole number is Prime ?" + "\n");
+                                    Console.WriteLine("You Are At -> 5- Checking if a Whole number is Prime ?" + "\n");
                                     Programing1.HomeWork3.PrimeCheck();
 
+                                    break;
+                                case 6:
+                                    Console.WriteLine("You Are At -> 6- Reading (N) and Calculating N = 1 * 2 * n" + "\n");
+                                    Programing1.HomeWork3.CalcNumN();
                                     break;
 
                                 default:
