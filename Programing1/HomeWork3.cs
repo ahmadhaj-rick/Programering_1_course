@@ -236,6 +236,35 @@ namespace Programing1
 
         }
 
+        public static void CalcNumN() // 4.6
+        {
+            /**
+            6.Läs ett nummer från tangentbordet. Räkna n!(1 * 2 * 3 *?.* n)
+            **/
+            int result2 = 1;
+            int result;
+            int num;
+            Console.WriteLine("Enter a number to Calculate n = (1 * 2 * 3 * n");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Path 1");
+            for (int counter = 1; counter < num; counter++)
+            {
+                result = counter * num;
+                Console.WriteLine(result);
+
+            }
+
+            Console.WriteLine("Path 2");
+            for (int counter = 1; counter < num; counter++)
+            {
+                // result = counter * counter;
+                result2 *= counter;
+                Console.WriteLine(result2);
+
+            }
+
+
+        }
 
 
 
