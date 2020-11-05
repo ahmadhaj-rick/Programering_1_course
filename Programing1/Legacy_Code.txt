@@ -1,4 +1,68 @@
 ﻿
+            // move all the comments under to legacy code file. 
+
+            /** bool method template 
+            private bool CheckAll()
+            {
+                if (....)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            **/
+
+            /** use this logic to get true or false output or result!
+            for (int counter = 2; counter < num; counter++)
+            {
+
+
+                if (num == 0)
+                {
+                    Console.WriteLine("The number Zero is not Prime");
+                }
+                if (num == 1)
+                {
+                    Console.WriteLine("Number One is not Prime!");
+                }
+                if (num == 2)
+                {
+                    Console.WriteLine("Number 2 is Prime!");
+                }
+                if (counter != num && num % counter != 0 )
+                {
+                    Console.WriteLine(num + " / " + counter + " is not equaly divided!");
+                    Console.WriteLine("Checking next number....");
+                    //break; // not dividable then our check is > true 
+                }
+                else
+                {
+                    Console.WriteLine(num + " / " + counter + "gives an Equal number!");
+                    Console.WriteLine(num + "is not a prime number!");
+                    //break;
+                }
+
+            }
+            **/
+
+
+
+
+
+
+            /**
+               else
+                    {
+                        Console.WriteLine(num + " / " + counter + "gives an Equal number!");
+                        Console.WriteLine(num + "is not a prime number!");
+                        counter = 0;
+                    } 
+             
+            
+            **/
+
+
 
 /**
 using System; // this is copied and done 

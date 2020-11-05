@@ -40,6 +40,7 @@ namespace Programing1
             
         }
 
+
         public static void CountingUp2Input() // 4.2
         {
 
@@ -63,6 +64,7 @@ namespace Programing1
 
             
         }
+
 
         public static void CountingUp2Input2() // 4.3
         {
@@ -100,11 +102,14 @@ namespace Programing1
             }
         }
 
+
+
         public static void FibonacciSequence() // 4.4
         {
             /**
             4.Skriv ett program som listar de N första talen i Fibonacci serien
             **/
+
             /**
             the logic is the sequnce start with 0 and then 1, those two number are
             then added so 0 + 1 = 1 > 1 + 1 = 2 > 1 + 2 = 3 > 2 + 3 = 5 > 3 + 5
@@ -133,6 +138,8 @@ namespace Programing1
                 Console.Write(num3 + " ");
             }
         }
+
+
 
         public static void PrimeCheck() //4.5
         {
@@ -171,68 +178,8 @@ namespace Programing1
             }
 
 
-            // move all the comments under to legacy code file. 
-
-            /** bool method template 
-            private bool CheckAll()
-            {
-                if (....)
-                {
-                    return true;
-                }
-
-                return false;
-            }
-            **/
-
-            /** use this logic to get true or false output or result!
-            for (int counter = 2; counter < num; counter++)
-            {
 
 
-                if (num == 0)
-                {
-                    Console.WriteLine("The number Zero is not Prime");
-                }
-                if (num == 1)
-                {
-                    Console.WriteLine("Number One is not Prime!");
-                }
-                if (num == 2)
-                {
-                    Console.WriteLine("Number 2 is Prime!");
-                }
-                if (counter != num && num % counter != 0 )
-                {
-                    Console.WriteLine(num + " / " + counter + " is not equaly divided!");
-                    Console.WriteLine("Checking next number....");
-                    //break; // not dividable then our check is > true 
-                }
-                else
-                {
-                    Console.WriteLine(num + " / " + counter + "gives an Equal number!");
-                    Console.WriteLine(num + "is not a prime number!");
-                    //break;
-                }
-
-            }
-            **/
-
-
-
-
-
-
-            /**
-               else
-                    {
-                        Console.WriteLine(num + " / " + counter + "gives an Equal number!");
-                        Console.WriteLine(num + "is not a prime number!");
-                        counter = 0;
-                    } 
-             
-            
-            **/
 
         }
 
@@ -241,7 +188,7 @@ namespace Programing1
             /**
             6.Läs ett nummer från tangentbordet. Räkna n!(1 * 2 * 3 *?.* n)
             **/
-            int result2 = 1;
+            int result2;
             int result;
             int num;
             Console.WriteLine("Enter a number to Calculate n = (1 * 2 * 3 * n");
@@ -258,7 +205,8 @@ namespace Programing1
             for (int counter = 1; counter < num; counter++)
             {
                 // result = counter * counter;
-                result2 *= counter;
+                result2 = counter * (num - 1);
+                //result2 = counter * result2;
                 Console.WriteLine(result2);
 
             }
