@@ -1,4 +1,26 @@
 ﻿
+
+
+
+
+
+
+
+
+            /** leagcy not working !!
+            Console.WriteLine("Path 3");
+            for (int i = 1; i < num; i++)
+            {
+                // result = counter * counter;
+                result2 = i * (num - 1);
+                //result2 = counter * result2;
+                Console.WriteLine(result2);
+
+            }
+            **/
+            
+            
+            
             // move all the comments under to legacy code file. 
 
             /** bool method template 
