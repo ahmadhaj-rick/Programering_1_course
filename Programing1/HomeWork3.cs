@@ -188,33 +188,43 @@ namespace Programing1
             /**
             6.Läs ett nummer från tangentbordet. Räkna n!(1 * 2 * 3 *?.* n)
             **/
-            int result2;
-            int result;
+            int result1 = 1;
+            int result2 = 1;
             int num;
             Console.WriteLine("Enter a number to Calculate n = (1 * 2 * 3 * n");
             num = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Path 1");
-            for (int counter = 1; counter < num; counter++)
-            {
-                result = counter * num;
-                Console.WriteLine(result);
 
+            Console.WriteLine("Path 1 - While Loop");
+            int j = 1;
+            while (j <= num)
+            {
+                result1 = result1 * j;
+                j++;
+                Console.WriteLine(result1);
             }
 
-            Console.WriteLine("Path 2");
-            for (int counter = 1; counter < num; counter++)
+            Console.WriteLine("Path 2 - For Loop");
+            for (int i = 1; i <= num; i++)
             {
-                // result = counter * counter;
-                result2 = counter * (num - 1);
-                //result2 = counter * result2;
+                result2 = result2 * i;
                 Console.WriteLine(result2);
 
             }
-
+            
 
         }
 
+        public static void CalcNumN2()
+        {
+            /**
+            7.Läs ett nummer från tangentbordet. Räkna o skriv 
+            på skärmen 1 + 1 * 2 + 1 * 2 * 3 +?.+ 1 * 2 * 3 *? *n;
+            **/
 
+
+
+
+        }
 
 
 
