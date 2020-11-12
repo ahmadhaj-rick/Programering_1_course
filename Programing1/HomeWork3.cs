@@ -1,6 +1,8 @@
 ﻿
 
 using System;
+using System.Collections.Generic;
+
 namespace Programing1
 {
     public class HomeWork3
@@ -224,11 +226,135 @@ namespace Programing1
 
 
 
+
+
         }
 
+        public static void RangePrimNum() //4.8
+        {
+
+            //num > 5 and between num1 and num2
+
+            int num = 5;
+            Console.WriteLine("Enter the First number of the Range");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Second number of the range");
+            int num2 = Convert.ToInt32(Console.ReadLine());
 
 
+            /**
+            while (num1 > num && num <= num2)
+            {
 
+                // Check for prim
+                if (IsPrime(num1))
+                {
+                    Console.WriteLine("The Number"+ num1 +"entered is Prime");
+                }
+                else
+                {
+                    Console.WriteLine("The number is not Prime");
+                }
+
+
+                num++;
+
+            }
+            **/
+
+            if (num1 >= num)
+            {
+                
+                for(int counter = num; counter <= num2; counter++)
+                {
+                    if (IsPrime(counter))
+                    {
+                        Console.WriteLine("The Number " + counter + " Is a Prime number ");
+                    }
+                    /**
+                    else
+                    {
+                        Console.WriteLine("The Number " + counter + " Is not Prime ");
+                    }
+                    **/
+
+                }
+
+            }
+
+
+            static bool IsPrime(int num)
+            {
+                if (num == 0) { return false; }
+                if (num == 1) { return false; }
+                if (num == 2) { return true; }
+
+                for (int counter = 2; counter < num; counter++)
+                {
+                    if (num % counter == 0) { return false; }
+                }
+
+                return true;
+            }
+
+
+        }
+
+        public static void Alphabet() //4.9
+        {
+
+            // 9. Skriv hela alfabetet på skärmen
+
+            Console.WriteLine("This Small script prints out the Alphabet into the screen");
+            Console.WriteLine("Accessing a List Index every Letter gets printed out \n");
+
+            var Alphabet = new List <string>()
+            {
+                "A","B","C","D","E","F","G","H","I","J","K",
+                "L","M","N","O","P","Q","R","S","T","U","V","W",
+                "X","Y","Z",
+
+            };
+
+            for (int i = 0; i < Alphabet.Count; i++)
+            {
+                Console.Write(" " + Alphabet[i] + " ");
+            }
+        }
+
+        public static void MulitTable() // 4.10
+        {
+            // 10. Skriv på skärmen multiplikationstabellen 1-15.
+
+            int num1 = 1;
+            int num2 = 15;
+
+            for (int i = 0; i < num2; i++)
+            {
+                int result = i * num1;
+                Console.WriteLine(result);
+
+            }
+
+
+        }
+
+        public static void PowerTo() // 4.11
+        {
+            Console.WriteLine("Enter the base number! ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Power number");
+            int pow = Convert.ToInt32(Console.ReadLine());
+            int result = num;
+            for (int i = 1; i < pow; i++)
+            {
+
+                result *= num;
+               
+            }
+            Console.WriteLine(result);
+
+        }
 
         public HomeWork3()
         {
