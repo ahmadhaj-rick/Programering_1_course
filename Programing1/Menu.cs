@@ -285,7 +285,26 @@ namespace HomeWorkMenu
                                     Console.WriteLine("You Are At -> 6- Reading (N) and Calculating N = 1 * 2 * n" + "\n");
                                     Programing1.HomeWork3.CalcNumN();
                                     break;
-
+                                case 7:
+                                    Console.WriteLine("You Are At -> 7- Work in progress "+ "\n");
+                                    break;
+                                case 8:
+                                    Console.WriteLine("You Are At -> 8- Check Prime Number in Range of Two numbers " + "\n");
+                                    Programing1.HomeWork3.RangePrimNum();
+                                    break;
+                                case 9:
+                                    Console.WriteLine("You Are At -> 9- Print out the Alphabet on screen (List)"+ "\n");
+                                    Programing1.HomeWork3.Alphabet();
+                                    break;
+                                case 10:
+                                    Console.WriteLine("You Are At -> 10- Multiplication table. " + "\n");
+                                    Programing1.HomeWork3.MulitTable();
+                                    
+                                    break;
+                                case 11:
+                                    Console.WriteLine("You Are At -> 11- Raise to Power"+ "\n");
+                                    Programing1.HomeWork3.PowerTo();
+                                    break; 
                                 default:
                                     Console.WriteLine("Back To Main Menu.\n");
                                     // Menu.Main(); try to bring back the user to start of the
