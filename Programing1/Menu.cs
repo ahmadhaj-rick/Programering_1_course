@@ -43,7 +43,11 @@ namespace HomeWorkMenu
                     "                    -> 4- Printing the (N) numbers of the Fibonacci Sequence\n" +
                     "                    -> 5- Checking if a Whole number is Prime?\n" +
                     "                    -> 6 - Reading(N) and Calculating N = 1 * 2 * n\n" +
-                    "" +
+                    "                    -> 7 - Work in progress\n" +
+                    "                    -> 8- Check Prime Number in Range of Two numbers\n" +
+                    "                    -> 9- Print out the Alphabet on screen (List)\n" +
+                    "                    ->10- Multiplication table.\n" +
+                    "                    ->11- Raise to Power\n" +
                     "\n" +
                     "4- Methods          -> 1- ....Work in Progress\n" +
                     "                    -> 2- ....Work in Progress\n" +
@@ -57,7 +61,7 @@ namespace HomeWorkMenu
                 // Menu and Sub-Menu To choose which home work to execute!
                 switch (Main_option)
                 {
-                    case 1: // First HomeWork Section - Main Menu (1)
+                    case 1: // First HomeWork Section - Sub Menu (1)
 
 
                         int Option_1 = 1;
@@ -108,9 +112,9 @@ namespace HomeWorkMenu
 
                         } // End While Loop  Sub-Menu (1).
 
-                        break; // End First HomeWork Section - Main Menu (1)
+                        break; // End First HomeWork Section - Sub Menu (1)
 
-                    case 2: // Second HomeWork Section - Main Menu (2)
+                    case 2: // Second HomeWork Section - Sub Menu (2)
 
                         int Option_2 = 1;
                         while (Option_2 != 0) // While Loop  Sub-Menu (2).
@@ -234,9 +238,9 @@ namespace HomeWorkMenu
                         } // End While Loop Sub-Menu (2).
 
 
-                        break; // End Second HomeWork Section - Main Menu (2)
+                        break; // End Second HomeWork Section - Sub Menu (2)
 
-                    case 3: // Third HomeWork Section
+                    case 3: // Third HomeWork Section  - Sub Menu (3)
                             // Console.WriteLine("You Here 3_1");
 
                         int Option_3 = 1;
@@ -249,7 +253,12 @@ namespace HomeWorkMenu
                                               "                    -> 3- Counting up to the number inputed,Check dividable by 3 & 7\n" +
                                               "                    -> 4- Printing the (N) numbers of the Fibonacci Sequence\n" +
                                               "                    -> 5- Checking if a Whole number is Prime?\n" +
-                                              "                    -> 6- Reading (N) and Calculating N = 1 * 2 * n" +
+                                              "                    -> 6- Reading (N) and Calculating N = 1 * 2 * n.\n" +
+                                              "                    -> 7- Work in progress.\n" +
+                                              "                    -> 8- Check Prime Number in Range of Two numbers.\n" +
+                                              "                    -> 9- Print out the Alphabet on screen (List).\n" +
+                                              "                    ->10- Multiplication table.\n" +
+                                              "                    ->11- Raise to Power.\n" +
                                               "\n");
 
                             Option_3 = Convert.ToInt16(Console.ReadLine());
@@ -319,7 +328,43 @@ namespace HomeWorkMenu
                         } // End While Loop Sub-Menu (3).
                         
 
-                        break; // End Third HomeWork Section - Main Menu (3)
+                        break; // End Third HomeWork Section - Sub Menu (3)
+
+                    case 4: // Fourth HomeWork Section - Sub Menu (4)
+
+                        int Option_4 = 1;
+                        while (Option_4 != 0)
+                        {
+                            Console.WriteLine("\n" +
+                                "" +
+                                "" +
+                                "" +
+                                "" +
+                                "" +
+                                "" +
+                                "" +
+                                "" +
+                                "" +
+                                "\n");
+
+                            Option_4 = Convert.ToInt32(Console.ReadLine());
+
+                            switch (Option_4)
+                            {
+                                case 1:
+
+
+                                    break;
+
+
+
+                            }
+
+
+                        }
+
+
+                        break;
 
                     default: // Default HomeWork Section - Main Menu (Default)
                         Console.WriteLine("Back To Main Menu.\n");
