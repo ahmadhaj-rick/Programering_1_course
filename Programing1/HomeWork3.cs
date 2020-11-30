@@ -179,10 +179,6 @@ namespace Programing1
                 return true;
             }
 
-
-
-
-
         }
 
         public static void CalcNumN() // 4.6
