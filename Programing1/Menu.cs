@@ -49,7 +49,7 @@ namespace HomeWorkMenu
                     "                    ->10- Multiplication table.\n" +
                     "                    ->11- Raise to Power\n" +
                     "\n" +
-                    "4- Methods          -> 1- ....Work in Progress\n" +
+                    "4- Methods          -> 1- 4 Types of Methods.\n" +
                     "                    -> 2- ....Work in Progress\n" +
                     "\n" +
                     "5-Vectors And Lists -> 1- ....Work in Progress\n" +
@@ -352,10 +352,13 @@ namespace HomeWorkMenu
                             switch (Option_4)
                             {
                                 case 1:
+                                    Console.WriteLine("You are at 1- 4 types of methods.");
+                                    Programing1.HomeWork4.MethodTypes();
+                                    break;
+                                case 2:
 
 
                                     break;
-
 
 
                             }
