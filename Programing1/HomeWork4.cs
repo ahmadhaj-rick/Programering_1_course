@@ -81,8 +81,12 @@ namespace Programing1
                 int result = 0;
                 if (IsPrime(counter))
                 {
+                    Console.WriteLine(result + "result Stage1");
+                    Console.WriteLine(counter + "counter Stage1");
                     counter += result;
                     counter++;
+                    Console.WriteLine(result + "result Stage2");
+                    Console.WriteLine(counter + "counter Stage2").
                 }
                 else
                 {
