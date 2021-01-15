@@ -356,10 +356,13 @@ namespace HomeWorkMenu
                                     Programing1.HomeWork4.MethodTypes();
                                     break;
                                 case 2:
-
+                                    Console.WriteLine("You are at 2- Count up to input and sum primes in between.");
+                                    Programing1.HomeWork4.SumUpToPrim();
+                                    break;
+                                case 3:
+                                    Console.WriteLine("You are at 3- ");
 
                                     break;
-
 
                             }
 
