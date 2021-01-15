@@ -70,35 +70,57 @@ namespace Programing1
             Du ska använda metoder för att göra det.
             **/
 
-            int counter = 1;
+            int counter = 0;
+            int result = 0;
+            int result2 = 0;
             //int result;
-            Console.Write("Enter a number to count up to and sum all the primes in between!");
+            Console.Write("Enter a number to count up to and sum all the primes in between! : .. ");
             int num = Convert.ToInt32(Console.ReadLine());
-
+            
+            // sincec i'm stubborn this is the while do method :3 
             do
              {
                 //int counter = 1:
-                int result = 0;
+                //int result = 0;
                 if (IsPrime(counter))
                 {
-                    Console.WriteLine(result + "result Stage1");
-                    Console.WriteLine(counter + "counter Stage1");
-                    counter += result;
+                    //Console.WriteLine(result + "result Stage1\n");
+                   // Console.WriteLine(counter + "counter Stage1\n");
+                    
+                    result += counter;
                     counter++;
-                    Console.WriteLine(result + "result Stage2");
-                    Console.WriteLine(counter + "counter Stage2").
+                   
+                    //Console.WriteLine(result + "result Stage2\n");
+                    //Console.WriteLine(counter + "counter Stage2\n");
                 }
                 else
                 {
                     counter++;
+                    //Console.WriteLine(counter + "not prime!\n");
                 }
              } while (counter != num);
+            
+            Console.WriteLine("the sum of primes up to " + num + " is " + result);
+            //end of the while do method xD
 
+            // this is the for loop method 
 
+            for (int i = 1; i <= num; i++)
+            {
+                if (IsPrime(i))
+                {
+                    
+                    result2 += i;
+                }
+            }
+            
+            Console.WriteLine("the sum of primes up to " + num + " is " + result2);
+
+            //end of the for loop method
             static bool IsPrime(int num)
             {
                 if (num == 0) { return false; }
-                if (num == 1) { return false; }
+                if (num == 1) { return true; }
                 if (num == 2) { return true; }
 
                 for (int counter = 2; counter < num; counter++)
