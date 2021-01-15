@@ -259,7 +259,7 @@ namespace Programing1
             static bool IsPrime(int num)
             {
                 if (num == 0) { return false; }
-                if (num == 1) { return false; }
+                if (num == 1) { return true; }
                 if (num == 2) { return true; }
 
                 for (int counter = 2; counter < num; counter++)
