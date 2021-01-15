@@ -8,6 +8,18 @@ namespace Programing1
         public static void MethodTypes() // 5.1 
         {
 
+            /**
+            Skriv ett program som ska innehålla alla 4 typer av metoder
+            (utan in/ut-data, med indata, med utdata och med in och ut-data)
+            Forslag:Gör ett meny:
+            1. Metod utan in/utdata
+            2. Metod med indata
+            3. Metod med utdata
+            4. Metod med in/utdata
+            5. Exit
+            **/
+
+
             static void Method_No_InOrOut()
             {
                 Console.WriteLine("This is an Exmple of a Method that dont take any argument" +
@@ -26,7 +38,7 @@ namespace Programing1
             static void Method_With_OutputOnly()
             {
 
-                Console.WriteLine("");
+                Console.WriteLine("Sup");
 
             }
 
@@ -50,9 +62,48 @@ namespace Programing1
         }
 
 
-        public static void HomeWork3()
+        public static void SumUpToPrim()
         {
+            /**
+            Be användare att ange ett nummer. Du ska summera alla primtal fram till den nummer.
+            Till exempel: 30, du ska summera 1+2+3+5+7+11+13+17+19+23+29 = 130
+            Du ska använda metoder för att göra det.
+            **/
 
+            int counter = 1;
+            //int result;
+            Console.Write("Enter a number to count up to and sum all the primes in between!");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            do
+             {
+                //int counter = 1:
+                int result = 0;
+                if (IsPrime(counter))
+                {
+                    counter += result;
+                    counter++;
+                }
+                else
+                {
+                    counter++;
+                }
+             } while (counter != num);
+
+
+            static bool IsPrime(int num)
+            {
+                if (num == 0) { return false; }
+                if (num == 1) { return false; }
+                if (num == 2) { return true; }
+
+                for (int counter = 2; counter < num; counter++)
+                {
+                    if (num % counter == 0) { return false; }
+                }
+
+                return true;
+            }
 
 
         }

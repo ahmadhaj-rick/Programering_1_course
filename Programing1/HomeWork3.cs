@@ -238,25 +238,7 @@ namespace Programing1
             int num2 = Convert.ToInt32(Console.ReadLine());
 
 
-            /**
-            while (num1 > num && num <= num2)
-            {
-
-                // Check for prim
-                if (IsPrime(num1))
-                {
-                    Console.WriteLine("The Number"+ num1 +"entered is Prime");
-                }
-                else
-                {
-                    Console.WriteLine("The number is not Prime");
-                }
-
-
-                num++;
-
-            }
-            **/
+            
 
             if (num1 >= num)
             {
@@ -267,12 +249,7 @@ namespace Programing1
                     {
                         Console.WriteLine("The Number " + counter + " Is a Prime number ");
                     }
-                    /**
-                    else
-                    {
-                        Console.WriteLine("The Number " + counter + " Is not Prime ");
-                    }
-                    **/
+                    
 
                 }
 

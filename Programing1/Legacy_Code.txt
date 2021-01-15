@@ -1,1 +1,802 @@
+<<<<<<< HEAD
 ﻿            /** leagcy not working !!            Console.WriteLine("Path 3");            for (int i = 1; i < num; i++)            {                // result = counter * counter;                result2 = i * (num - 1);                //result2 = counter * result2;                Console.WriteLine(result2);            }            **/                                                // move all the comments under to legacy code file.             /** bool method template             private bool CheckAll()            {                if (....)                {                    return true;                }                return false;            }            **/            /** use this logic to get true or false output or result!            for (int counter = 2; counter < num; counter++)            {                if (num == 0)                {                    Console.WriteLine("The number Zero is not Prime");                }                if (num == 1)                {                    Console.WriteLine("Number One is not Prime!");                }                if (num == 2)                {                    Console.WriteLine("Number 2 is Prime!");                }                if (counter != num && num % counter != 0 )                {                    Console.WriteLine(num + " / " + counter + " is not equaly divided!");                    Console.WriteLine("Checking next number....");                    //break; // not dividable then our check is > true                 }                else                {                    Console.WriteLine(num + " / " + counter + "gives an Equal number!");                    Console.WriteLine(num + "is not a prime number!");                    //break;                }            }            **/            /**               else                    {                        Console.WriteLine(num + " / " + counter + "gives an Equal number!");                        Console.WriteLine(num + "is not a prime number!");                        counter = 0;                    }                                      **//**using System; // this is copied and done namespace CalcTwoNumbers{    class Sum    {        static void Main(string[] args)        {            Console.WriteLine("Please enter First number: ");            int num1 = Convert.ToInt32(Console.ReadLine());            Console.WriteLine("Please enter second Number: ");            int num2 = Convert.ToInt32(Console.ReadLine());            int result = num1 + num2;            Console.WriteLine(result);            Console.ReadLine();        }    }}**//**using System; this is copid and done namespace CalcThreeNumbers{    class SumAndMedium    {        static void Main(string[] args)        {            Console.WriteLine("Please enter First number: ");            int num1 = Convert.ToInt32(Console.ReadLine());            Console.WriteLine("Please enter second Number: ");            int num2 = Convert.ToInt32(Console.ReadLine());            Console.WriteLine("Please enter the third Number: ");            int num3 = Convert.ToInt32(Console.ReadLine());            int result = num1 + num2 + num3;            int medium = result / 3;            Console.WriteLine(result);            Console.WriteLine(medium);            Console.ReadLine();        }    }}**//**using System; this is copied and done namespace ConvDecToWhole{    class Converter    {        static void Main(string[] args)        {            Console.WriteLine("Enter a Decimal Number to convert to a whole number: ");            decimal num = Convert.ToDecimal(Console.ReadLine());            Console.WriteLine(Convert.ToInt32(num));            Console.ReadLine();        }    }}**//**using System;  this is copid and done namespace salaryCalc{    class Calc    {        static void Main(string[] args)        {            // Reading input from user Start             Console.WriteLine("Enter The First salary: ");            double sal1 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Enter The Second salary: ");            double sal2 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Enter The Third salary: ");            double sal3 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Enter The Fourth salary: ");            double sal4 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Enter The Fifth salary: ");            double sal5 = Convert.ToDouble(Console.ReadLine());            // Reading input from user End             // the varibles seciton Start            double tax = 0.32;            double sumBeforeTax = Convert.ToDouble(sal1 + sal2 + sal3 + sal4 + sal5);            double medium = Convert.ToInt32(sumBeforeTax / 5);            double sumAfterTax = sumBeforeTax * tax;            double taxation1 = sumBeforeTax - sumAfterTax;            // Varibles after the 10% raise             double tenPercentUp = 1.10;            double raiseSalary = Convert.ToInt32(sumBeforeTax * tenPercentUp);            double raiseTaxSalary = Convert.ToInt32(raiseSalary * tax);            double taxation2 = Convert.ToInt32(raiseSalary - raiseTaxSalary);             // Varibels secition Ends             // Printing output Section Start             Console.WriteLine("The Five Salaries That have been inputed are: " + sal1 + " " + sal2 + " " + sal3 + " "+ sal4 + " " + sal5 + " " + "The Tax is: " + tax);            Console.WriteLine("The Medium is: " + medium);            Console.WriteLine("The Salary After Tax is : " + sumAfterTax);            Console.WriteLine("The Ammount that goes to the Tax Agency: " + taxation1);            // Output After Raise             Console.WriteLine("The Salaries after the 10% Rasie is : " + raiseSalary);            Console.WriteLine("The New Salaries Taxation is : " + raiseTaxSalary);            Console.WriteLine("The New Ammount that goes to the Taxing Agency is : " + taxation2);            // Printing output Section End            Console.ReadLine();  // wait for input to exit the program         }    }}**//**using System; this is copied and donenamespace twoNums{    class Comp    {        static void Main(string[] arg)        {            Console.WriteLine("Please Enter Two numbers to compare and find the lowest vaule: ");            int num1 = Convert.ToInt32(Console.ReadLine());            int num2 = Convert.ToInt32(Console.ReadLine());            if (num1 > num2)            {                Console.WriteLine("The lowest vaule is: " + num2);            }            else            {                Console.WriteLine("The lowest Value is: " + num1);            }            Console.ReadLine();        }    }}**//**using System;namespace threeNums{    class Comp    {        static void Main(string[] arg)        {                       Console.WriteLine("Please Enter Three numbers to compare and find the lowest vaule: ");            // Storing input             int num1 = Convert.ToInt32(Console.ReadLine());            int num2 = Convert.ToInt32(Console.ReadLine());            int num3 = Convert.ToInt32(Console.ReadLine());            // if statemnts section             if (num1 < num2 && num1 < num3)            {                Console.WriteLine("The lowest vaule is: " + num1);            }            else if (num2 < num1 && num2 < num3)            {                Console.WriteLine("The lowest Value is: " + num2);            }else            {                Console.WriteLine("The Lowest Value is: " + num3);            }            // end of if statment section <<<< we here  above is copied and done            //if statment for if equals zero  // this is copied and done             if ((num1 == 0 ) && (num2 == 0) && (num3 == 0))            {                Console.WriteLine("All Numbers are Zero");            }            else if ((num1 == 0) || (num2 == 0) || (num3 == 0))            {                Console.WriteLine("One of the Numbers is Zero");            }            else            {                Console.WriteLine("None of the numbers a Zero");            }            //checking if the number is postive or negtive or 0  this is copid and done             Console.WriteLine("Enter a number to check if it's negtive or postive: ");            double num = Convert.ToDouble(Console.ReadLine());            // if statment section             if (num > 0 && num != 0)            {                Console.WriteLine("The number " + "" + num + "" + "is positve");            }else if (num < 0)            {                Console.WriteLine("The Number " + "" + num + "" + "is Negative");            }else            {                Console.WriteLine("You have entered Zero");            }            //end of if statment section            //input section for Triangle  this is copied and done             Console.WriteLine("Enter The three sides of the triangle: ");            double side1 = Convert.ToDouble(Console.ReadLine());            double side2 = Convert.ToDouble(Console.ReadLine());            double side3 = Convert.ToDouble(Console.ReadLine());            //end of input section for Trianlge            // if statment for Trianlge sides             if (side1 == side2 && side2 == side3)            {                Console.WriteLine("The Triangle's Sides are all Equal !");            }            if (side1 == side2 || side1 == side3 || side2 == side3)            {                Console.WriteLine("The Traingle has two equal sides ! ");            }else            {                Console.WriteLine("The Traingle has no equal sides !");            }            // End of if statment for Triangle sides             //Calculating the traingle omkrets             double Circum = side1 + side2 + side3;            Console.WriteLine(Circum);            // End Of Triangle onkrets            Console.ReadLine();                   }    }}**//**using System;namespace Age{    class Comp    {        static void Main(string[] arg) // this is copied and done        {            Console.WriteLine("Enter the ages of the three kids to findout who is " +                    "the oldest and the diffrence between the oldest and the youngest");            int child1 = Convert.ToInt32(Console.ReadLine());            int child2 = Convert.ToInt32(Console.ReadLine());            int child3 = Convert.ToInt32(Console.ReadLine());            int Oldest;            int Young;            //Figuring out the Oldest [IF Statments]            if (child1 > child2 && child1 > child3)            {                Console.WriteLine("The Oldest  is: " + child1);                Oldest = child1;            }            else if (child2 > child1 && child2 > child3)            {                Console.WriteLine("The Oldest  is: " + child2);                Oldest = child2;            }            else            {                Console.WriteLine("The Oldest is: " + child3);                Oldest = child3;            }            //Figuring out the youngest            if (child1 < child2 && child1 < child3)            {                // Console.WriteLine("The Youngest  is: " + child1);                Young = child1;            }            else if (child2 < child1 && child2 < child3)            {                // Console.WriteLine("The Youngest is: " + child2);                Young = child2;            }            else            {                // Console.WriteLine("The Youngest is:  " + child3);                Young = child3;            }            // Figuring out the Difference between oldest and youngest            int Diff;            Diff = Oldest - Young;            Console.WriteLine("The Age Differenec Between the Oldest and Youngest is:  "                + Diff);        }    }}**//**using System;namespace Comp{    class Winner    {        static void Main(string[] arg)        {            Console.WriteLine("Enter First athlet points: ");            double athlet1 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Enter the second Athlet points: ");            double athlet2 = Convert.ToDouble(Console.ReadLine());            if (athlet1 > athlet2)            {                Console.Write("The First Place goes to" + "" + athlet1 + "" + "and Second place goes to" + athlet2);            }else            {                Console.Write("The First Place goes to" + "" + athlet2 + "" + "and Second place goes to" + athlet1);            }        }    }}**//**using System;namespace Comp{    class ResultName    {        static void Main(string[] arg)        {            Console.WriteLine("Every student must enter thier names and then thier grades, one after the other! ");            Console.WriteLine("Write Your Full Name: ");            string name1 = Console.ReadLine();            Console.WriteLine("Enter Your grade: ");            double grade1 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Write Your Full Name: ");            string name2 = Console.ReadLine();            Console.WriteLine("Enter Your grade: ");            double grade2 = Convert.ToDouble(Console.ReadLine());            Console.WriteLine("Write Your Full Name: ");            string name3 = Console.ReadLine();            Console.WriteLine("Enter Your grade: ");            double grade3 = Convert.ToDouble(Console.ReadLine());            string student1 = name1 + grade1;            string student2 = name2 + grade2;            string student3 = name3 + grade3;            // Figure out first Place student ( Highest Value)                        if (grade1 > grade2 && grade1 > grade3)            {                Console.WriteLine("First Place Student is: " + " " + student1);                            }else if (grade2 > grade1 && grade2 > grade3)            {                Console.WriteLine("First Place Student is: " + " " + student2);            }            else            {                Console.WriteLine("First Place Student is: " + " " + student3);            }            // Figure out second place student (Middle Value)            if (grade1 > grade2)            {                if (grade2 > grade3)                {                    Console.WriteLine("The Second Place Goes to:  " + "" + student2);                }else if (grade1 > grade3)                {                    Console.WriteLine("The Second Place Goes to: " + ""+ student3);                }else                {                    Console.WriteLine("The Second Place Goes to: " + "" + student1);                }            }else            {                if(grade1 > grade3)                {                    Console.WriteLine("The Second Place Goes to : " + "" + student1);                }else if (grade2 > grade3)                {                    Console.WriteLine("The Second Place Goes to : " + ""+ student3);                }else                {                    Console.WriteLine("The Second place Goes to : " + "" + student2);                }            }            /**            if (grade1 < grade2  && grade1 > grade3 )            {                Console.WriteLine("The Second Place Student is: " + "" + student1);            }else if (grade2 < grade1 && grade2 > grade3)            {                Console.WriteLine("The Second Place Student is: " + "" + student2);            }            else            {                Console.WriteLine("The Second Place Student is: " + "" + student3);            }            **/// Figure out thired place student (Lowest Value)/** <<<<< Delete this if (grade1 < grade2 && grade1 < grade3){    Console.WriteLine("Third Place Student is: " + "" + student1);}else if (grade2 < grade1 && grade2 < grade3){    Console.WriteLine("Thrid Place Student is: " + "" + student2);}else{    Console.WriteLine("Thrid Place Student is: " + "" + student3);}}}} **/ // this is done and copied /**using System; // this is done and copied namespace Comp{    class Equation    {        static void Main(string[] arg)        {            double a;             double x;            double b;            int Opetion;            Console.WriteLine("The Solve the Following Equation [ ax + b = 0 ] you need to know Two Varibles out of the Three!");            Console.WriteLine("If you want to solve for [a], Enter [1] !");            Console.WriteLine("If you want to solve for [x], Enter [2] !");            Console.WriteLine("If you want to solve for [b], Enter [3] !");            Opetion = Convert.ToInt16(Console.ReadLine());            if (Opetion == 1 )            {                Console.WriteLine("Enter the Value for [x]: ");                x = Convert.ToDouble(Console.ReadLine());                Console.WriteLine("Enter The Value for [b]");                b = Convert.ToDouble(Console.ReadLine());                double Equation = -b/x;                Console.WriteLine("The Value for [a] is : " + " " + Equation);            }else if (Opetion == 2)            {                Console.WriteLine("Enter the Value for [a]: ");                a = Convert.ToDouble(Console.ReadLine());                Console.WriteLine("Enter The Value for [b]");                b = Convert.ToDouble(Console.ReadLine());                double Equation = -b / a;                Console.WriteLine("The Value for [x] is : " + " " + Equation);            }else            {                Console.WriteLine("Enter the Value for [x]: ");                x = Convert.ToDouble(Console.ReadLine());                Console.WriteLine("Enter The Value for [a]");                a = Convert.ToDouble(Console.ReadLine());                double Equation = -a * x;                Console.WriteLine("The Value for [b] is : " + " " + Equation);            }            // double Equation = a * x + b;        }    }}**//**using System;namespace Comp{    class EvenOdd    {        static void Main(string[] arg)        {            double num;            Console.WriteLine("Enter a number to Figure out if its odd or even: ");            num = Convert.ToDouble(Console.ReadLine());            if ( num % 2 == 0)            {                Console.WriteLine("The Number entered is Even");             }else if (num % 2 != 0 )            {                Console.WriteLine("The number enter is Odd");            }else            {                Console.WriteLine("Erorr, You done did Fucked up ");            }         }    }}**//**using System;  // this is copied and done namespace Comp{    class LeapOrNot    {        static void Main(string[] arg)        {            int year;            Console.Write("Enter a year to figure out if its Leap year or Not: ");            year = Convert.ToInt32(Console.ReadLine());            if (year % 4 == 0 || year % 400 == 0)            {                Console.WriteLine("The year is a leap year!, so its 366 days");            }            else            {                Console.WriteLine("The year is not a leap year!, so its 365 days");            }            Console.ReadLine();        }    }}**//**using System; // this is copied and done namespace Comp{    class BarOrBolaget    {        static void Main(string[] arg)        {            Console.WriteLine("Enter Your age to check if can buy Alcohol at a bar or Systembolaget!");            double age = Convert.ToDouble(Console.ReadLine());            if (age >= 20)            {                Console.WriteLine("You can Buy Alcohol and the Bar ");            }else if (age < 20 && age >= 18)            {                Console.WriteLine("You can only buy Alcohol at the bar ");            }            else            {                Console.WriteLine("You are too young to buy Alcohol!!");            }            Console.ReadLine();        }    }    }**//**using System; // this is copied and done namespace Comp{    class MinutesToHours    {        static void Main(string[] arg)        {            double hours;            Console.WriteLine("Enter how many minutes you have to Convert it to hours! ");            double minutes = Convert.ToDouble(Console.ReadLine());            hours = minutes / 60;            Console.WriteLine("You have " + " " + hours + " " + "Hours ");        }    }}**//**  // this is copied and done using System;namespace Comp{    class OldToNew    {        static void Main(string[] arg)        {            Console.WriteLine("Enter Your Grade to Convert it to the new system! ");            string grade = Console.ReadLine();            if (grade == "F" || grade == "f")            {                Console.WriteLine("Your grade equals (IG) in the new system");            }else if (grade == "E" || grade == "e")            {                Console.WriteLine("Your grade equals (G) in the new system");            }            else if (grade == "D" || grade == "C" || grade == "d" || grade == "c")            {                Console.WriteLine("Your grade equals (VG) in the new system");            }            else if (grade == "B" || grade == "A" || grade == "b" || grade == "a")            {                Console.WriteLine("Your grade equals (MVG) in the new system");            }else            {                Console.WriteLine("The Character you entered is not a grade");            }        }    }}**/
+=======
+﻿
+
+
+
+
+
+/**
+                    else
+                    {
+                        Console.WriteLine("The Number " + counter + " Is not Prime ");
+                    }
+                    **/
+
+
+            /**
+            while (num1 > num && num <= num2)
+            {
+
+                // Check for prim
+                if (IsPrime(num1))
+                {
+                    Console.WriteLine("The Number"+ num1 +"entered is Prime");
+                }
+                else
+                {
+                    Console.WriteLine("The number is not Prime");
+                }
+
+
+                num++;
+
+            }
+            **/
+
+
+
+
+
+
+
+            /** leagcy not working !!
+            Console.WriteLine("Path 3");
+            for (int i = 1; i < num; i++)
+            {
+                // result = counter * counter;
+                result2 = i * (num - 1);
+                //result2 = counter * result2;
+                Console.WriteLine(result2);
+
+            }
+            **/
+            
+            
+            
+            // move all the comments under to legacy code file. 
+
+            /** bool method template 
+            private bool CheckAll()
+            {
+                if (....)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            **/
+
+            /** use this logic to get true or false output or result!
+            for (int counter = 2; counter < num; counter++)
+            {
+
+
+                if (num == 0)
+                {
+                    Console.WriteLine("The number Zero is not Prime");
+                }
+                if (num == 1)
+                {
+                    Console.WriteLine("Number One is not Prime!");
+                }
+                if (num == 2)
+                {
+                    Console.WriteLine("Number 2 is Prime!");
+                }
+                if (counter != num && num % counter != 0 )
+                {
+                    Console.WriteLine(num + " / " + counter + " is not equaly divided!");
+                    Console.WriteLine("Checking next number....");
+                    //break; // not dividable then our check is > true 
+                }
+                else
+                {
+                    Console.WriteLine(num + " / " + counter + "gives an Equal number!");
+                    Console.WriteLine(num + "is not a prime number!");
+                    //break;
+                }
+
+            }
+            **/
+
+
+
+
+
+
+            /**
+               else
+                    {
+                        Console.WriteLine(num + " / " + counter + "gives an Equal number!");
+                        Console.WriteLine(num + "is not a prime number!");
+                        counter = 0;
+                    } 
+             
+            
+            **/
+
+
+
+/**
+using System; // this is copied and done 
+
+namespace CalcTwoNumbers
+{
+    class Sum
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter First number: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter second Number: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            int result = num1 + num2;
+
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
+    }
+}
+**/
+
+
+
+
+
+/**
+using System; this is copid and done 
+
+namespace CalcThreeNumbers
+{
+    class SumAndMedium
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter First number: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter second Number: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter the third Number: ");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+
+            int result = num1 + num2 + num3;
+            int medium = result / 3;
+
+            Console.WriteLine(result);
+            Console.WriteLine(medium);
+            Console.ReadLine();
+        }
+    }
+}
+**/
+
+
+
+
+
+/**
+using System; this is copied and done 
+
+namespace ConvDecToWhole
+{
+    class Converter
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter a Decimal Number to convert to a whole number: ");
+            decimal num = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine(Convert.ToInt32(num));
+            Console.ReadLine();
+
+        }
+    }
+}
+**/
+
+
+
+
+
+/**
+using System;  this is copid and done 
+
+namespace salaryCalc
+{
+    class Calc
+    {
+        static void Main(string[] args)
+        {
+            // Reading input from user Start 
+            Console.WriteLine("Enter The First salary: ");
+            double sal1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter The Second salary: ");
+            double sal2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter The Third salary: ");
+            double sal3 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter The Fourth salary: ");
+            double sal4 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter The Fifth salary: ");
+            double sal5 = Convert.ToDouble(Console.ReadLine());
+            // Reading input from user End 
+
+
+            // the varibles seciton Start
+            double tax = 0.32;
+            double sumBeforeTax = Convert.ToDouble(sal1 + sal2 + sal3 + sal4 + sal5);
+            double medium = Convert.ToInt32(sumBeforeTax / 5);
+            double sumAfterTax = sumBeforeTax * tax;
+            double taxation1 = sumBeforeTax - sumAfterTax;
+
+            // Varibles after the 10% raise 
+
+            double tenPercentUp = 1.10;
+            double raiseSalary = Convert.ToInt32(sumBeforeTax * tenPercentUp);
+            double raiseTaxSalary = Convert.ToInt32(raiseSalary * tax);
+            double taxation2 = Convert.ToInt32(raiseSalary - raiseTaxSalary); 
+            // Varibels secition Ends 
+
+            // Printing output Section Start 
+            Console.WriteLine("The Five Salaries That have been inputed are: " + sal1 + " " + sal2 + " " + sal3 + " "+ sal4 + " " + sal5 + " " + "The Tax is: " + tax);
+            Console.WriteLine("The Medium is: " + medium);
+
+            Console.WriteLine("The Salary After Tax is : " + sumAfterTax);
+            Console.WriteLine("The Ammount that goes to the Tax Agency: " + taxation1);
+
+            // Output After Raise 
+            Console.WriteLine("The Salaries after the 10% Rasie is : " + raiseSalary);
+            Console.WriteLine("The New Salaries Taxation is : " + raiseTaxSalary);
+            Console.WriteLine("The New Ammount that goes to the Taxing Agency is : " + taxation2);
+
+
+
+            // Printing output Section End
+
+
+            Console.ReadLine();  // wait for input to exit the program 
+
+        }
+    }
+}
+
+**/
+
+
+
+
+
+/**
+using System; this is copied and done
+
+namespace twoNums
+{
+    class Comp
+    {
+        static void Main(string[] arg)
+        {
+            Console.WriteLine("Please Enter Two numbers to compare and find the lowest vaule: ");
+
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 > num2)
+            {
+                Console.WriteLine("The lowest vaule is: " + num2);
+            }
+            else
+            {
+                Console.WriteLine("The lowest Value is: " + num1);
+            }
+
+            Console.ReadLine();
+
+        }
+    }
+}
+**/
+
+
+/**
+using System;
+namespace threeNums
+{
+    class Comp
+    {
+
+        static void Main(string[] arg)
+        {
+           
+            Console.WriteLine("Please Enter Three numbers to compare and find the lowest vaule: ");
+
+            // Storing input 
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            int num3 = Convert.ToInt32(Console.ReadLine());
+
+            // if statemnts section 
+            if (num1 < num2 && num1 < num3)
+            {
+                Console.WriteLine("The lowest vaule is: " + num1);
+            }
+            else if (num2 < num1 && num2 < num3)
+            {
+                Console.WriteLine("The lowest Value is: " + num2);
+            }else
+            {
+                Console.WriteLine("The Lowest Value is: " + num3);
+            }
+            // end of if statment section <<<< we here  above is copied and done
+
+
+            //if statment for if equals zero  // this is copied and done 
+            if ((num1 == 0 ) && (num2 == 0) && (num3 == 0))
+            {
+                Console.WriteLine("All Numbers are Zero");
+            }
+            else if ((num1 == 0) || (num2 == 0) || (num3 == 0))
+            {
+                Console.WriteLine("One of the Numbers is Zero");
+            }
+            else
+            {
+                Console.WriteLine("None of the numbers a Zero");
+            }
+
+
+            //checking if the number is postive or negtive or 0  this is copid and done 
+            Console.WriteLine("Enter a number to check if it's negtive or postive: ");
+            double num = Convert.ToDouble(Console.ReadLine());
+
+            // if statment section 
+            if (num > 0 && num != 0)
+            {
+                Console.WriteLine("The number " + "" + num + "" + "is positve");
+            }else if (num < 0)
+            {
+                Console.WriteLine("The Number " + "" + num + "" + "is Negative");
+            }else
+            {
+                Console.WriteLine("You have entered Zero");
+            }
+            //end of if statment section
+
+            //input section for Triangle  this is copied and done 
+            Console.WriteLine("Enter The three sides of the triangle: ");
+
+            double side1 = Convert.ToDouble(Console.ReadLine());
+            double side2 = Convert.ToDouble(Console.ReadLine());
+            double side3 = Convert.ToDouble(Console.ReadLine());
+
+            //end of input section for Trianlge
+
+            // if statment for Trianlge sides 
+
+            if (side1 == side2 && side2 == side3)
+            {
+                Console.WriteLine("The Triangle's Sides are all Equal !");
+            }
+            if (side1 == side2 || side1 == side3 || side2 == side3)
+            {
+                Console.WriteLine("The Traingle has two equal sides ! ");
+            }else
+            {
+                Console.WriteLine("The Traingle has no equal sides !");
+            }
+            // End of if statment for Triangle sides 
+
+            //Calculating the traingle omkrets 
+
+            double Circum = side1 + side2 + side3;
+            Console.WriteLine(Circum);
+
+            // End Of Triangle onkrets
+
+            Console.ReadLine();
+           
+        }
+
+    }
+}
+
+**/
+
+
+
+/**
+using System;
+namespace Age
+{
+    class Comp
+    {
+        static void Main(string[] arg) // this is copied and done
+        {
+            Console.WriteLine("Enter the ages of the three kids to findout who is " +
+                    "the oldest and the diffrence between the oldest and the youngest");
+
+            int child1 = Convert.ToInt32(Console.ReadLine());
+            int child2 = Convert.ToInt32(Console.ReadLine());
+            int child3 = Convert.ToInt32(Console.ReadLine());
+            int Oldest;
+            int Young;
+            //Figuring out the Oldest [IF Statments]
+            if (child1 > child2 && child1 > child3)
+            {
+                Console.WriteLine("The Oldest  is: " + child1);
+                Oldest = child1;
+            }
+            else if (child2 > child1 && child2 > child3)
+            {
+                Console.WriteLine("The Oldest  is: " + child2);
+                Oldest = child2;
+            }
+            else
+            {
+                Console.WriteLine("The Oldest is: " + child3);
+                Oldest = child3;
+            }
+
+            //Figuring out the youngest
+
+            if (child1 < child2 && child1 < child3)
+            {
+                // Console.WriteLine("The Youngest  is: " + child1);
+                Young = child1;
+            }
+            else if (child2 < child1 && child2 < child3)
+            {
+                // Console.WriteLine("The Youngest is: " + child2);
+                Young = child2;
+            }
+            else
+            {
+                // Console.WriteLine("The Youngest is:  " + child3);
+                Young = child3;
+            }
+
+            // Figuring out the Difference between oldest and youngest
+            int Diff;
+            Diff = Oldest - Young;
+
+            Console.WriteLine("The Age Differenec Between the Oldest and Youngest is:  "
+                + Diff);
+        }
+    }
+}
+**/
+
+/**
+using System;
+namespace Comp
+{
+    class Winner
+    {
+        static void Main(string[] arg)
+        {
+            Console.WriteLine("Enter First athlet points: ");
+            double athlet1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second Athlet points: ");
+            double athlet2 = Convert.ToDouble(Console.ReadLine());
+
+            if (athlet1 > athlet2)
+            {
+                Console.Write("The First Place goes to" + "" + athlet1 + "" + "and Second place goes to" + athlet2);
+            }else
+            {
+                Console.Write("The First Place goes to" + "" + athlet2 + "" + "and Second place goes to" + athlet1);
+            }
+        }
+    }
+}
+**/
+
+
+/**
+using System;
+namespace Comp
+{
+    class ResultName
+    {
+        static void Main(string[] arg)
+        {
+            Console.WriteLine("Every student must enter thier names and then thier grades, one after the other! ");
+            Console.WriteLine("Write Your Full Name: ");
+            string name1 = Console.ReadLine();
+            Console.WriteLine("Enter Your grade: ");
+            double grade1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Write Your Full Name: ");
+            string name2 = Console.ReadLine();
+            Console.WriteLine("Enter Your grade: ");
+            double grade2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Write Your Full Name: ");
+            string name3 = Console.ReadLine();
+            Console.WriteLine("Enter Your grade: ");
+            double grade3 = Convert.ToDouble(Console.ReadLine());
+
+            string student1 = name1 + grade1;
+            string student2 = name2 + grade2;
+            string student3 = name3 + grade3;
+
+            // Figure out first Place student ( Highest Value)
+
+            
+            if (grade1 > grade2 && grade1 > grade3)
+            {
+                Console.WriteLine("First Place Student is: " + " " + student1);
+                
+            }else if (grade2 > grade1 && grade2 > grade3)
+            {
+                Console.WriteLine("First Place Student is: " + " " + student2);
+            }
+            else
+            {
+                Console.WriteLine("First Place Student is: " + " " + student3);
+            }
+
+
+            // Figure out second place student (Middle Value)
+
+            if (grade1 > grade2)
+            {
+                if (grade2 > grade3)
+                {
+                    Console.WriteLine("The Second Place Goes to:  " + "" + student2);
+                }else if (grade1 > grade3)
+                {
+                    Console.WriteLine("The Second Place Goes to: " + ""+ student3);
+                }else
+                {
+                    Console.WriteLine("The Second Place Goes to: " + "" + student1);
+                }
+            }else
+            {
+                if(grade1 > grade3)
+                {
+                    Console.WriteLine("The Second Place Goes to : " + "" + student1);
+                }else if (grade2 > grade3)
+                {
+                    Console.WriteLine("The Second Place Goes to : " + ""+ student3);
+                }else
+                {
+                    Console.WriteLine("The Second place Goes to : " + "" + student2);
+                }
+            }
+
+            /**
+            if (grade1 < grade2  && grade1 > grade3 )
+            {
+                Console.WriteLine("The Second Place Student is: " + "" + student1);
+            }else if (grade2 < grade1 && grade2 > grade3)
+            {
+                Console.WriteLine("The Second Place Student is: " + "" + student2);
+            }
+            else
+            {
+                Console.WriteLine("The Second Place Student is: " + "" + student3);
+            }
+            **/
+
+// Figure out thired place student (Lowest Value)
+/** <<<<< Delete this 
+if (grade1 < grade2 && grade1 < grade3)
+{
+    Console.WriteLine("Third Place Student is: " + "" + student1);
+
+}
+else if (grade2 < grade1 && grade2 < grade3)
+{
+    Console.WriteLine("Thrid Place Student is: " + "" + student2);
+}
+else
+{
+    Console.WriteLine("Thrid Place Student is: " + "" + student3);
+}
+
+}
+}
+} **/ // this is done and copied 
+
+/**
+using System; // this is done and copied 
+namespace Comp
+{
+    class Equation
+    {
+        static void Main(string[] arg)
+        {
+            double a; 
+            double x;
+            double b;
+            int Opetion;
+            Console.WriteLine("The Solve the Following Equation [ ax + b = 0 ] you need to know Two Varibles out of the Three!");
+            Console.WriteLine("If you want to solve for [a], Enter [1] !");
+            Console.WriteLine("If you want to solve for [x], Enter [2] !");
+            Console.WriteLine("If you want to solve for [b], Enter [3] !");
+            Opetion = Convert.ToInt16(Console.ReadLine());
+
+            if (Opetion == 1 )
+            {
+                Console.WriteLine("Enter the Value for [x]: ");
+                x = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter The Value for [b]");
+                b = Convert.ToDouble(Console.ReadLine());
+                double Equation = -b/x;
+                Console.WriteLine("The Value for [a] is : " + " " + Equation);
+            }else if (Opetion == 2)
+            {
+                Console.WriteLine("Enter the Value for [a]: ");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter The Value for [b]");
+                b = Convert.ToDouble(Console.ReadLine());
+                double Equation = -b / a;
+                Console.WriteLine("The Value for [x] is : " + " " + Equation);
+            }else
+            {
+                Console.WriteLine("Enter the Value for [x]: ");
+                x = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter The Value for [a]");
+                a = Convert.ToDouble(Console.ReadLine());
+                double Equation = -a * x;
+                Console.WriteLine("The Value for [b] is : " + " " + Equation);
+            }
+
+
+            // double Equation = a * x + b;
+
+        }
+    }
+}
+**/
+
+/**
+using System;
+namespace Comp
+{
+    class EvenOdd
+    {
+        static void Main(string[] arg)
+        {
+            double num;
+            Console.WriteLine("Enter a number to Figure out if its odd or even: ");
+            num = Convert.ToDouble(Console.ReadLine());
+
+            if ( num % 2 == 0)
+            {
+                Console.WriteLine("The Number entered is Even"); 
+            }else if (num % 2 != 0 )
+            {
+                Console.WriteLine("The number enter is Odd");
+            }else
+            {
+                Console.WriteLine("Erorr, You done did Fucked up ");
+            } 
+        }
+    }
+}
+**/
+/**
+using System;  // this is copied and done 
+namespace Comp
+{
+    class LeapOrNot
+    {
+        static void Main(string[] arg)
+        {
+            int year;
+            Console.Write("Enter a year to figure out if its Leap year or Not: ");
+            year = Convert.ToInt32(Console.ReadLine());
+
+            if (year % 4 == 0 || year % 400 == 0)
+            {
+                Console.WriteLine("The year is a leap year!, so its 366 days");
+            }
+            else
+            {
+                Console.WriteLine("The year is not a leap year!, so its 365 days");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+
+**/
+
+/**
+using System; // this is copied and done 
+namespace Comp
+{
+    class BarOrBolaget
+    {
+        static void Main(string[] arg)
+        {
+            Console.WriteLine("Enter Your age to check if can buy Alcohol at a bar or Systembolaget!");
+            double age = Convert.ToDouble(Console.ReadLine());
+
+            if (age >= 20)
+            {
+                Console.WriteLine("You can Buy Alcohol and the Bar ");
+            }else if (age < 20 && age >= 18)
+            {
+                Console.WriteLine("You can only buy Alcohol at the bar ");
+            }
+            else
+            {
+                Console.WriteLine("You are too young to buy Alcohol!!");
+            }
+            Console.ReadLine();
+        }
+    }
+    
+}
+
+**/
+
+/**
+using System; // this is copied and done 
+namespace Comp
+{
+    class MinutesToHours
+    {
+        static void Main(string[] arg)
+        {
+            double hours;
+            Console.WriteLine("Enter how many minutes you have to Convert it to hours! ");
+            double minutes = Convert.ToDouble(Console.ReadLine());
+
+            hours = minutes / 60;
+            Console.WriteLine("You have " + " " + hours + " " + "Hours ");
+
+        }
+    }
+}
+**/
+/**  // this is copied and done 
+using System;
+namespace Comp
+{
+    class OldToNew
+    {
+        static void Main(string[] arg)
+        {
+            Console.WriteLine("Enter Your Grade to Convert it to the new system! ");
+            string grade = Console.ReadLine();
+            if (grade == "F" || grade == "f")
+            {
+                Console.WriteLine("Your grade equals (IG) in the new system");
+            }else if (grade == "E" || grade == "e")
+            {
+                Console.WriteLine("Your grade equals (G) in the new system");
+            }
+            else if (grade == "D" || grade == "C" || grade == "d" || grade == "c")
+            {
+                Console.WriteLine("Your grade equals (VG) in the new system");
+            }
+            else if (grade == "B" || grade == "A" || grade == "b" || grade == "a")
+            {
+                Console.WriteLine("Your grade equals (MVG) in the new system");
+            }else
+            {
+                Console.WriteLine("The Character you entered is not a grade");
+            }
+        }
+    }
+}
+
+**/
+>>>>>>> 686f1c5f54a5284324d76898e6ecc0121a287b9e
