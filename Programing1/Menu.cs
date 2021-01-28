@@ -361,8 +361,8 @@ namespace HomeWorkMenu
                                     Programing1.HomeWork4.SumUpToPrim();
                                     break;
                                 case 3:
-                                    Console.WriteLine("You are at 3- ");
-
+                                    Console.WriteLine("You are at 3- Size of the TV from the diagonal length  ");
+                                    Programing1.HomeWork4.TvSize();
                                     break;
                                 case 4:
 
