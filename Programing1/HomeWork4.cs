@@ -134,7 +134,65 @@ namespace Programing1
 
         }
 
+        public static void TvSize()
+        {
+            /**
+             Calle vill köpa en tv, men, vet inte om han får plats med den. Du ska göra ett program som ska räkna hur stort en wide screen tv är, beroende på diagonalen.
+             Diagonalen ska matas in i tum och resultaten ska skrivas i cm.
+             Widescreen betyder att tvn har en skala som är 16:9 eller för 9 enheter på höjden har vi 16 enheter på bredden.
+             Du kommer att behöva papper o penna :) o Pytagorassatsen!!
+            **/
 
+            /**
+              i can't implemnt >>> let X be the width , let y be the height. to calc x => [x = (arh * y) / arw ] . to calc y => [y = (arw * x ) / arh] , a  
+              
+              easier to implemnt >>>> aspect ratio W:H, the [width = W * X] , [height = H * X ] , where x is a base relitve number to both. 
+              let D be the diagnol > sqrt(d) = sqrt(W * X) + sqrt(H * X) >> x = d / sqrt(W + H) . we find X and use it.   
+            **/
+            // Varibels section !!
+
+            double h; // height
+            double w; // width 
+            double d; // diagnol
+            double arw; // ration for width ex : 16
+            double arh; // ratio for hieght ex : 9
+
+            // End of Varibels sections
+
+            // Taking input Value from user
+
+            Console.WriteLine("Enter the Diagnol size : ");
+            d = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the First Value of the Aspect Ratio: ");
+            arw = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the second Value of the Aspect Ratio: ");
+            arh = Convert.ToDouble(Console.ReadLine());
+
+            // End of Input Value from user 
+
+            // Logic 
+
+
+            double ratio1 = Math.Pow(arw,2) + Math.Pow(arh,2); // Calculating the sum of the power to 2 of the ratio
+            // Console.WriteLine(ratio1); ghetto debugging xD
+            
+            double common = Math.Sqrt(ratio1); // Square rooting the sum of the ratio 
+            //Console.WriteLine(common); ghetto debugging xD
+
+            double rationDia = d / common; // Dividing the Diagnol on the square root of the sum of the ratio >> gives us X the reltive number. 
+            //Console.WriteLine(rationDia); ghetto debugging xD
+
+            w = rationDia * arw; // use X to figure out the Width 
+            h = rationDia * arh; // use X to figure out the Height 
+
+            Console.WriteLine("The Width of the TV is : " + w + "\n");
+            Console.WriteLine("The Height of the TV is : " + h + "\n");
+
+
+
+        }
 
 
     }
