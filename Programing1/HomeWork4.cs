@@ -62,7 +62,7 @@ namespace Programing1
         }
 
 
-        public static void SumUpToPrim()
+        public static void SumUpToPrim() // 5.2
         {
             /**
             Be användare att ange ett nummer. Du ska summera alla primtal fram till den nummer.
@@ -134,7 +134,7 @@ namespace Programing1
 
         }
 
-        public static void TvSize()
+        public static void TvSize() // 5.3
         {
             /**
              Calle vill köpa en tv, men, vet inte om han får plats med den. Du ska göra ett program som ska räkna hur stort en wide screen tv är, beroende på diagonalen.
@@ -189,6 +189,66 @@ namespace Programing1
 
             Console.WriteLine("The Width of the TV is : " + w + "\n");
             Console.WriteLine("The Height of the TV is : " + h + "\n");
+
+
+
+        }
+        public static void GuessingGame() // 5.4
+        {
+
+            /**
+             
+            Dator slupar fram ett numer (se forumet för hur man gör). Du ska skapa ett program som ska visa ett meny:
+            1. Spela
+            2. Visa resultat
+            3. Quit
+            Spela ska vara ett metod som har inparameter namn. Metoden ska slumpa fram ett numer, och utmana spelaren att gissa ett tal.
+            Om talet är för lågt eller för högt man få meddela, och när spelaren gissar rätt så man ska säga efter hur många försök +
+            man ska skriva resultaten i en textfil (se forumet för hur man skriver i en textfil). 
+            I textfilen  skriver du Namn och antalFörsök
+            Visa resultat -ett metod med varken in eller utparameter som ska skriva ut textfilen på skärmen
+            Man ska visa "spelmeny" tills användare trycker på 3.
+
+            **/
+
+            int RandNum = new Random().Next(0, 20);
+            int GuessCounter = 0;
+            int UserInput = -1;
+            Console.WriteLine(RandNum);
+            while(GuessCounter != 4 && UserInput != RandNum)
+            {
+                Console.WriteLine("This is a Guess the Number Game, the number is between [0-20].\n" +
+                    "The Game Will tell you if you guessed too low or too high. You only have 4 Guesses.");
+               
+                Console.WriteLine("Please Enter your guess Between [0 - 20]");
+                UserInput = Convert.ToInt32(Console.ReadLine());
+                CheckAnswer(UserInput);
+
+
+                GuessCounter++;
+            }
+
+
+
+            void CheckAnswer(int input) // checks the answer funcation 
+            {
+
+                if(input == RandNum) // win condition
+                {
+                    Console.WriteLine("You Won, You Entered: " + input + " And The Random Number Is: " + RandNum);
+                }else if(input < RandNum) // too low condition
+                {
+                    Console.WriteLine("You went too low, You Entered: " + UserInput);
+                }else if(input > RandNum) // too high condition
+                {
+                    Console.WriteLine("You went too high, You Entered: " + UserInput);
+                }else if (GuessCounter == 4 ) // Too many tries
+                {
+                    Console.WriteLine("You lost, You Entered: " + input + " And The Random Number Is: " + RandNum);
+                }
+
+            }
+
 
 
 
