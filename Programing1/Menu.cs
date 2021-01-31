@@ -50,7 +50,9 @@ namespace HomeWorkMenu
                     "                    ->11- Raise to Power\n" +
                     "\n" +
                     "4- Methods          -> 1- 4 Types of Methods.\n" +
-                    "                    -> 2- ....Work in Progress\n" +
+                    "                    -> 2- Count up to input and sum primes in between.\n" +
+                    "                    -> 3- Size of the TV from the diagonal length.\n" +
+                    "                    -> 4- Guessing the Random Number Game!\n" +
                     "\n" +
                     "5-Vectors And Lists -> 1- ....Work in Progress\n" +
                     "                    -> 2- ....Work in PRogress\n");
@@ -338,10 +340,10 @@ namespace HomeWorkMenu
                             Console.WriteLine("\n" +
                                 "4- Methods          -> 1- 4 Types of Methods.\n" +
                                 "                    -> 2- Count up to input and sum primes in between.\n" +
-                                "" +
-                                "" +
-                                "" +
-                                "" +
+                                "                    -> 3- Size of the TV from the diagonal length.\n" +
+                                "                    -> 4- Guessing the Random Number Game!\n" +
+                                "                    -> 5- Under Dev\n" +
+                                "                    -> 6- Under Dev\n" +
                                 "" +
                                 "" +
                                 "" +
@@ -361,11 +363,14 @@ namespace HomeWorkMenu
                                     Programing1.HomeWork4.SumUpToPrim();
                                     break;
                                 case 3:
-                                    Console.WriteLine("You are at 3- Size of the TV from the diagonal length  ");
+                                    Console.WriteLine("You are at 3- Size of the TV from the diagonal length.");
                                     Programing1.HomeWork4.TvSize();
                                     break;
                                 case 4:
-
+                                    Console.WriteLine("You are at 4- Guessing the Random Number Game!");
+                                    Programing1.HomeWork4.GuessingGame();
+                                    break;
+                                case 5:
 
                                     break;
                                 default: // Default HomeWork Section - Main Menu (Default)
