@@ -254,6 +254,25 @@ namespace Programing1
 
         }
 
+        public static void PrimCounter()
+        {
+            /**
+             
+            Gör ett program som ska skriva på skärmen de första "x" antal primtal. 
+            Det är användare som "bestämmer" hur stort x ska vara. 
+            Du skall använda en metod som säger om ett nummer är primtal eller ej
+            Exempel:
+            Användaren skriver 10, då ska din program skriva på skärmen: 
+            1, 2, 3, 5, 7, 11, 13, 17, 19, 23
+
+            **/
+
+
+
+
+
+
+        }
 
     }
 

@@ -212,7 +212,7 @@ namespace Programing1
 
         }
 
-        public static void CalcNumN2()
+        public static void CalcNumN2() // 4.7
         {
             /**
             7.Läs ett nummer från tangentbordet. Räkna o skriv 
@@ -228,6 +228,8 @@ namespace Programing1
 
         public static void RangePrimNum() //4.8
         {
+
+            // 8. Utgår från punkt 5 och skriv alla primtal mellan 2 nummer du läser från tangentbordet.
 
             //num > 5 and between num1 and num2
 
@@ -258,7 +260,7 @@ namespace Programing1
 
             static bool IsPrime(int num)
             {
-                if (num == 0) { return false; }
+                if (num == 0) { return false;}
                 if (num == 1) { return true; }
                 if (num == 2) { return true; }
 
@@ -273,7 +275,7 @@ namespace Programing1
 
         }
 
-        public static void Alphabet() //4.9
+        public static void Alphabet() // 4.9
         {
 
             // 9. Skriv hela alfabetet på skärmen
@@ -283,6 +285,7 @@ namespace Programing1
 
             var Alphabet = new List <string>()
             {
+                
                 "A","B","C","D","E","F","G","H","I","J","K",
                 "L","M","N","O","P","Q","R","S","T","U","V","W",
                 "X","Y","Z",
