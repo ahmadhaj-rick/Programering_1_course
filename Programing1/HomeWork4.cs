@@ -213,22 +213,48 @@ namespace Programing1
 
             int RandNum = new Random().Next(0, 20);
             int GuessCounter = 0;
-            int UserInput = -1;
-            Console.WriteLine(RandNum);
-            while(GuessCounter != 4 && UserInput != RandNum)
-            {
-                Console.WriteLine("This is a Guess the Number Game, the number is between [0-20].\n" +
+            int inputGuess = -1;
+            
+            Console.WriteLine(RandNum); // ghetto debugging
+            Console.WriteLine("This is a Guess the Number Game, the number is between [0-20].\n" +
                     "The Game Will tell you if you guessed too low or too high. You only have 4 Guesses.");
+
+            while (GuessCounter != 4 && inputGuess != RandNum)
+            {
+                
                
                 Console.WriteLine("Please Enter your guess Between [0 - 20]");
-                UserInput = Convert.ToInt32(Console.ReadLine());
-                CheckAnswer(UserInput);
-
-
                 GuessCounter++;
+                var UserInput = Console.ReadLine(); // Varible that used in the TryParse function 
+
+                if (CheckInput(UserInput))
+                {
+                    CheckAnswer(inputGuess);
+                }
+                else
+                {
+                    Console.WriteLine("You have entered {0}, Which is not a valid number", inputGuess);
+                }
+
+                
+                Console.WriteLine("You have tried {0}", GuessCounter);
+
             }
 
+            bool CheckInput(string UserInput) // checks if the user entered a number. returns out a boolean value
+            {                                   // returns a True or False to help in the If Else statment.
 
+                if (int.TryParse(UserInput, out inputGuess)) // takes in the input and sends it out to inputguess 
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            
 
             void CheckAnswer(int input) // checks the answer funcation 
             {
@@ -236,17 +262,22 @@ namespace Programing1
                 if(input == RandNum) // win condition
                 {
                     Console.WriteLine("You Won, You Entered: " + input + " And The Random Number Is: " + RandNum);
-                }else if(input < RandNum) // too low condition
-                {
-                    Console.WriteLine("You went too low, You Entered: " + UserInput);
-                }else if(input > RandNum) // too high condition
-                {
-                    Console.WriteLine("You went too high, You Entered: " + UserInput);
-                }else if (GuessCounter == 4 ) // Too many tries
+                }
+                else if (GuessCounter == 4) // lose condtion
                 {
                     Console.WriteLine("You lost, You Entered: " + input + " And The Random Number Is: " + RandNum);
                 }
-
+                else // checks too low or too high 
+                {
+                    if (input < RandNum) // too low condition
+                    {
+                        Console.WriteLine("You went too low, You Entered: " + inputGuess);
+                    }
+                    else  // too high condition
+                    {
+                        Console.WriteLine("You went too high, You Entered: " + inputGuess);
+                    }
+                }
             }
 
 
@@ -266,6 +297,21 @@ namespace Programing1
             1, 2, 3, 5, 7, 11, 13, 17, 19, 23
 
             **/
+
+
+            static bool IsPrime(int num)
+            {
+                if (num == 0) { return false; }
+                if (num == 1) { return false; }
+                if (num == 2) { return true; }
+
+                for (int counter = 2; counter < num; counter++)
+                {
+                    if (num % counter == 0) { return false; }
+                }
+
+                return true;
+            }
 
 
 
