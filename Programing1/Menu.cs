@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 namespace HomeWorkMenu
 {
     class Menu
@@ -53,6 +54,10 @@ namespace HomeWorkMenu
                     "                    -> 2- Count up to input and sum primes in between.\n" +
                     "                    -> 3- Size of the TV from the diagonal length.\n" +
                     "                    -> 4- Guessing the Random Number Game!\n" +
+                    "                    -> 5- Printing Primes up to a number.\n" +
+                    "                    -> 6- Number Of Days\n" +
+                    "                    -> 7- Simple Speed Cam App\n" +
+                    "                    -> 8- Simple ATM App\n" +
                     "\n" +
                     "5-Vectors And Lists -> 1- ....Work in Progress\n" +
                     "                    -> 2- ....Work in PRogress\n");
@@ -342,12 +347,10 @@ namespace HomeWorkMenu
                                 "                    -> 2- Count up to input and sum primes in between.\n" +
                                 "                    -> 3- Size of the TV from the diagonal length.\n" +
                                 "                    -> 4- Guessing the Random Number Game!\n" +
-                                "                    -> 5- Under Dev\n" +
-                                "                    -> 6- Under Dev\n" +
-                                "" +
-                                "" +
-                                "" +
-                                "" +
+                                "                    -> 5- Printing Primes up to a number.\n" +
+                                "                    -> 6- Number Of Days\n" +
+                                "                    -> 7- Simple Speed Cam App\n" +
+                                "                    -> 8- Simple ATM App\n" +
                                 "\n");
 
                             Option_4 = Convert.ToInt32(Console.ReadLine());
@@ -359,19 +362,32 @@ namespace HomeWorkMenu
                                     Programing1.HomeWork4.MethodTypes();
                                     break;
                                 case 2:
-                                    Console.WriteLine("You are at 2- Count up to input and sum primes in between.");
+                                    Console.WriteLine("You are at 2- Count up to input and sum primes in between.\n");
                                     Programing1.HomeWork4.SumUpToPrim();
                                     break;
                                 case 3:
-                                    Console.WriteLine("You are at 3- Size of the TV from the diagonal length.");
+                                    Console.WriteLine("You are at 3- Size of the TV from the diagonal length.\n");
                                     Programing1.HomeWork4.TvSize();
                                     break;
                                 case 4:
-                                    Console.WriteLine("You are at 4- Guessing the Random Number Game!");
+                                    Console.WriteLine("You are at 4- Guessing the Random Number Game!\n");
                                     Programing1.HomeWork4.GuessingGame();
                                     break;
                                 case 5:
-
+                                    Console.WriteLine("You are at  5- Printing Primes up to a number.\n");
+                                    Programing1.HomeWork4.PrimCounter();
+                                    break;
+                                case 6:
+                                    Console.WriteLine("You are at  6- Number Of Days Calculator\n");
+                                    Programing1.HomeWork4.Veckodag();
+                                    break;
+                                case 7:
+                                    Console.WriteLine("You are at  7- Simple Speed Cam App\n");
+                                    Programing1.HomeWork4.SpeedCam();
+                                    break;
+                                case 8:
+                                    Console.WriteLine("You are at  8- Simple ATM App\n");
+                                    Programing1.HomeWork4.ATM();
                                     break;
                                 default: // Default HomeWork Section - Main Menu (Default)
                                     Console.WriteLine("Back To Main Menu.\n");
