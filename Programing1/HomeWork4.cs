@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Programing1
 {
     public class HomeWork4
@@ -285,7 +287,7 @@ namespace Programing1
 
         }
 
-        public static void PrimCounter()
+        public static void PrimCounter() // 5.5
         {
             /**
              
@@ -297,6 +299,34 @@ namespace Programing1
             1, 2, 3, 5, 7, 11, 13, 17, 19, 23
 
             **/
+
+            Console.WriteLine("Please Enter the amount of prime numbers to print!: ");
+            int n = Convert.ToInt32(Console.ReadLine()); // this will take input from the user
+            int NumGen = 0; // used as a number generator
+            int counter = 0; // used to be compared to the value of the user input, if true send back false signal to the while loop.
+            int[] PrimNum = new int[n]; // makes an array of size varible [n]
+            bool Status = true; // this is used to end the while loop
+            
+            while (Status)
+            {
+                
+                if (IsPrime(NumGen))
+                {
+                    //we append the number to the PrimNum Array
+                    PrimNum[counter] = NumGen;
+                    counter++;
+                }
+                if(counter == n) // checking if we reached the number desired from the user
+                {
+                    Status = false;
+                }else{
+                    //Console.WriteLine("Calculating");
+                }
+
+
+
+                NumGen++; // icriminting the value of the number generator-ish
+            }
 
 
             static bool IsPrime(int num)
@@ -313,8 +343,75 @@ namespace Programing1
                 return true;
             }
 
+            Console.WriteLine(String.Join(",", PrimNum));
 
 
+
+
+        }
+
+        public static void Veckodag() // 5.6
+        {
+            /**
+             Skriv ett program som ska skriva vad är det för veckodag om x antal dagar. 
+             Använd följande kod för att kolla vilken veckodagsnummer är idag:
+             "int dag= (int)DateTime.Now.DayOfWeek;"
+             tänk på att dag=0 = Söndag;
+             numer till exempel om idag är det Måndag ock jag skriver 8 
+             då programmet ska skriva på skärmen: "Om 8 dagar är det Tisdag";
+
+            **/
+
+
+
+
+        }
+
+        public static void SpeedCam() // 5.7
+        {
+            /**
+             Du ska skriva ett program som ska fungera som en fartkamera. 
+             Du ska mata in avstånd(meter) och tid (sekunder)och en metod ska räkna km/h. 
+             Beroende på svaret ska du ”gruppera” dem i 
+             hastighetsbegränsningar: de som kör under 30, 30-50, 50-70, 70-90 och över 90.
+            **/
+            double DistancMeter = 0;
+            double TimeSec = 0;
+            double DistanceKilo = DistancMeter / 1000;
+            double TimeHour = TimeSec / 3600;
+            double speed = DistanceKilo / TimeHour;
+
+            Console.WriteLine("Please Enter the Distance in Meters: ");
+            DistancMeter = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Please Enter the Time in Seconds: ");
+            TimeSec = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("The Speed is: {0}", speed);
+            Console.WriteLine("The Time in Hours is {0}",TimeHour);
+            Console.WriteLine("The Distance in Kilo {0}", DistanceKilo);
+            Console.WriteLine("The Time in Seconds is {0}",TimeSec);
+            Console.WriteLine("The Distance in Mete is {0}",DistancMeter);
+
+
+        }
+
+        public static void ATM() // 5.8
+        {
+            /**
+            Du ska göra ett program som ska simulera ett bankomatuttag. 
+            I början på programmet ska du fråga efter saldo, sen gör du en meny som ska se ut så här:
+            1. Uttag
+            2. Insättning
+            3. Saldo
+            4. Exit
+ 
+            1-3 ska använda metoder. Tänk på att det går att göra en metod för att skriva fin på skärmen saldo osv.
+            Ska man tänka på bankomat.. vit uttag/insättning kan man välja om man vill se saldo eller inte.
+            man kan prova "behålla" saldot i en textfil :) så efter du har gjort programmet, 
+            ändra i den så istället för att fråga efter saldo, ska den läsas från en textfil.
+
+            **/
 
 
 
