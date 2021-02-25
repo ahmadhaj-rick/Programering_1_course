@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace Programing1
 {
@@ -213,73 +215,148 @@ namespace Programing1
 
             **/
 
+            // Varibels Section
             int RandNum = new Random().Next(0, 20);
             int GuessCounter = 0;
             int inputGuess = -1;
+            int Exit = 1;
+            string Name = " Empty Name";
+            string storage = "Empty Storage";
+            //End of Varibles section 
             
-            Console.WriteLine(RandNum); // ghetto debugging
-            Console.WriteLine("This is a Guess the Number Game, the number is between [0-20].\n" +
-                    "The Game Will tell you if you guessed too low or too high. You only have 4 Guesses.");
-
-            while (GuessCounter != 4 && inputGuess != RandNum)
+            while( Exit != 0)
             {
-                
-               
-                Console.WriteLine("Please Enter your guess Between [0 - 20]");
-                GuessCounter++;
-                var UserInput = Console.ReadLine(); // Varible that used in the TryParse function 
+                Console.WriteLine(RandNum); // ghetto debugging
 
-                if (CheckInput(UserInput))
+                Console.WriteLine("Welcome to the game Menu. YOu have three Options: \n" +
+                                  "1- Start Game! \n " +
+                                  "2- Show your result! \n" +
+                                  "3- Exit the game! \n");
+                int option = Convert.ToInt16(Console.ReadLine());
+
+
+                switch (option)
                 {
-                    CheckAnswer(inputGuess);
+                    case 1:
+                        PlayGame();
+
+                        break;
+                    case 2:
+                        /**
+                        if (storage != null)  // trying to debugg async method (kml rn :( ) 
+                        {
+                            ShowResult();
+                        }
+                        else // trying to debugg async method (kml rn :( ) 
+                        {
+                            Console.WriteLine("No Results Has been saved yet!!");
+                        }
+                        **/
+                        ShowResult();
+
+                        break;
+                    default:
+                        Console.WriteLine("Thank you for Playing!");
+                        Exit = 0;
+                        break;
+
+
                 }
-                else
+
+
+                void PlayGame() // thefunction to play the game, uses CheckInput(); CheckAnswer(); Functions.
                 {
-                    Console.WriteLine("You have entered {0}, Which is not a valid number", inputGuess);
-                }
 
-                
-                Console.WriteLine("You have tried {0}", GuessCounter);
+                    Console.WriteLine("This is a Guess the Number Game, the number is between [0-20].\n" +
+                        "The Game Will tell you if you guessed too low or too high. You only have 4 Guesses.");
 
-            }
+                    Console.WriteLine("Please Enter your name:  ");
+                    Name = Console.ReadLine();
 
-            bool CheckInput(string UserInput) // checks if the user entered a number. returns out a boolean value
-            {                                   // returns a True or False to help in the If Else statment.
-
-                if (int.TryParse(UserInput, out inputGuess)) // takes in the input and sends it out to inputguess 
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            }
-            
-
-            void CheckAnswer(int input) // checks the answer funcation 
-            {
-
-                if(input == RandNum) // win condition
-                {
-                    Console.WriteLine("You Won, You Entered: " + input + " And The Random Number Is: " + RandNum);
-                }
-                else if (GuessCounter == 4) // lose condtion
-                {
-                    Console.WriteLine("You lost, You Entered: " + input + " And The Random Number Is: " + RandNum);
-                }
-                else // checks too low or too high 
-                {
-                    if (input < RandNum) // too low condition
+                    while (GuessCounter != 4 && inputGuess != RandNum)
                     {
-                        Console.WriteLine("You went too low, You Entered: " + inputGuess);
-                    }
-                    else  // too high condition
-                    {
-                        Console.WriteLine("You went too high, You Entered: " + inputGuess);
+
+
+
+                        Console.WriteLine("Please Enter your guess Between [0 - 20]");
+                        GuessCounter++;
+                        var UserInput = Console.ReadLine(); // Varible that used in the TryParse function 
+
+                        if (CheckInput(UserInput))
+                        {
+                            CheckAnswer(inputGuess);
+                        }
+                        else
+                        {
+                            Console.WriteLine("You have entered {0}, Which is not a valid number", inputGuess);
+                        }
+
+
+                        Console.WriteLine("You have tried {0}", GuessCounter);
+
                     }
                 }
+
+
+
+                bool CheckInput(string UserInput) // checks if the user entered a number. returns out a boolean value
+                {                                   // returns a True or False to help in the If Else statment.
+
+                    if (int.TryParse(UserInput, out inputGuess)) // takes in the input and sends it out to inputguess 
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+
+
+                String CheckAnswer(int input) // checks the answer funcation 
+                {
+
+                    if (input == RandNum) // win condition
+                    {
+                        Console.WriteLine("You Won, You Entered: " + input + " And The Random Number Is: " + RandNum);
+                        storage = "You Won, You Entered: " + input + " And The Random Number Is: " + RandNum;
+                        return storage;
+                    }
+                    else if (GuessCounter == 4) // lose condtion
+                    {
+                        Console.WriteLine("You lost, You Entered: " + input + " And The Random Number Is: " + RandNum);
+                        storage = "You lost, You Entered: " + input + " And The Random Number Is: " + RandNum;
+                        return storage;
+                    }
+                    else // checks too low or too high 
+                    {
+                        if (input < RandNum) // too low condition
+                        {
+                            Console.WriteLine("You went too low, You Entered: " + inputGuess);
+                            return null;
+                        }
+                        else  // too high condition
+                        {
+                            Console.WriteLine("You went too high, You Entered: " + inputGuess);
+                            return null;
+                        }
+                    }
+                }
+
+                void ShowResult()
+                {
+                    string result = Name + " " + storage;
+                    File.WriteAllText("/Users/0x0sp1d3r/Desktop/Programing_1/Programing1/Programing1/Results.txt", result);
+                    var resultRead = File.ReadAllText("/Users/0x0sp1d3r/Desktop/Programing_1/Programing1/Programing1/Results.txt");
+                    System.Console.WriteLine(resultRead);
+                    //Console.WriteLine(result + "Var"); // ghetto Debugging
+                    //Console.WriteLine(Name + "Var"); // ghetto Debugging
+                    //Console.WriteLine(storage + "Var"); // ghetto Debugging
+                }
+
+                
+
             }
 
 
@@ -325,7 +402,7 @@ namespace Programing1
 
 
 
-                NumGen++; // icriminting the value of the number generator-ish
+                NumGen++; // incriminting the value of the number generator-ish
             }
 
 
@@ -361,8 +438,17 @@ namespace Programing1
              då programmet ska skriva på skärmen: "Om 8 dagar är det Tisdag";
 
             **/
+            
+            int day = (int)DateTime.Now.DayOfWeek;
 
+            int counter = 1;
 
+            for (counter = 1; counter != 0; counter--)
+            {
+                
+
+            }
+            Console.Write(day);
 
 
         }
@@ -412,6 +498,72 @@ namespace Programing1
             ändra i den så istället för att fråga efter saldo, ska den läsas från en textfil.
 
             **/
+
+            Console.WriteLine("Welcome To this Simple ATM, there is no security here :) \n");
+
+            Console.WriteLine("Please Enter How much monies you have: \n");
+            double Balance = Convert.ToDouble(Console.ReadLine());
+
+            double num;
+            int Options = 1;
+            while (Options != 0)
+            {
+                Console.WriteLine("Your Balance is {0} \n", Balance);
+                Console.WriteLine("\n" +
+                    "This is the ATM Menu Please Select a Number to Navigate: \n" +
+                    "                   -> 1- Withdraw Monies. \n" +
+                    "                   -> 2- Deposit Monies \n" +
+                    "                   -> 3- To See How much Monies you have. \n" +
+                    "                   -> 4- To Exit. \n");
+                Options = Convert.ToInt16(Console.ReadLine());
+                switch (Options)
+                {
+
+                    case 1:
+                        Console.WriteLine("Enter the Ammout you wish to withdraw: ...\n");
+                        num = Convert.ToDouble(Console.ReadLine());
+                        Withdraw(num);
+                        Console.WriteLine(Balance);
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Enter the Ammout you wish to Deposit: ...\n");
+                        num = Convert.ToDouble(Console.ReadLine());
+                        Deposit(num);
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Your Current Balance is {0} \n", Balance);
+                        break;
+
+                    default:
+                        Console.WriteLine("Thank you For Using our Monies System!\n");
+                        break;
+
+
+
+                }
+
+            }
+
+            double Withdraw(double num) // Taking monies Out 
+            {
+                double NewBalance;
+
+                NewBalance = Balance - num; // Makes the 
+                Console.WriteLine("Operation was much sucess vry nice");
+                return Balance = NewBalance;
+
+            }
+
+            double Deposit(double num) // Putting Monies In
+            {
+                double NewBalance;
+                NewBalance = Balance + num;
+                Console.WriteLine("Operation was much sucess vry nice");
+                return Balance = NewBalance;
+
+            }
 
 
 
