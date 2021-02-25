@@ -373,7 +373,7 @@ namespace Programing1
             Du skall använda en metod som säger om ett nummer är primtal eller ej
             Exempel:
             Användaren skriver 10, då ska din program skriva på skärmen: 
-            1, 2, 3, 5, 7, 11, 13, 17, 19, 23
+            1, 2, 3, 5, 7, 11, 13, 17, 19, 23.
 
             **/
 
