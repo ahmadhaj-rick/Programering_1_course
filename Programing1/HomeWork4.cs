@@ -197,6 +197,7 @@ namespace Programing1
 
 
         }
+
         public static void GuessingGame() // 5.4
         {
 
@@ -442,13 +443,14 @@ namespace Programing1
             int day = (int)DateTime.Now.DayOfWeek;
 
             int counter = 1;
-
+            
             for (counter = 1; counter != 0; counter--)
             {
                 
 
             }
-            Console.Write(day);
+            
+            Console.WriteLine("This is the day number {0}",day);
 
 
         }
@@ -461,26 +463,32 @@ namespace Programing1
              Beroende på svaret ska du ”gruppera” dem i 
              hastighetsbegränsningar: de som kör under 30, 30-50, 50-70, 70-90 och över 90.
             **/
-            double DistancMeter = 0;
-            double TimeSec = 0;
-            double DistanceKilo = DistancMeter / 1000;
-            double TimeHour = TimeSec / 3600;
-            double speed = DistanceKilo / TimeHour;
 
-            Console.WriteLine("Please Enter the Distance in Meters: ");
-            DistancMeter = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please Enter the Distance in Meters: \n");
+            double DistancMeter = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Please Enter the Time in Seconds: ");
-            TimeSec = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please Enter the Time in Seconds: \n");
+            double TimeSec = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("The Speed is: {0}", speed);
-            Console.WriteLine("The Time in Hours is {0}",TimeHour);
-            Console.WriteLine("The Distance in Kilo {0}", DistanceKilo);
-            Console.WriteLine("The Time in Seconds is {0}",TimeSec);
-            Console.WriteLine("The Distance in Mete is {0}",DistancMeter);
+            double speed = DistancMeter / TimeSec * 3.6;
+            
+            SpeedLimits(speed);
 
+            void SpeedLimits(double num)
+            {
+                Console.WriteLine("You're current Speed is : {0} \n", speed);
+
+                if(num < 30) { Console.WriteLine("You are Driving under 30"); }
+                if (num >= 30 && num <= 50) { Console.WriteLine("You are Driving between 30 And 50"); }
+                if (num >=50 && num <= 70) { Console.WriteLine("You are Driving between 50 And 90"); }
+                if (num >= 70 && num <= 90) { Console.WriteLine("You are Driving between 70 And 90"); }
+                else { Console.WriteLine("You are Driving Above 90"); }
+
+            }
 
         }
+
+
 
         public static void ATM() // 5.8
         {
