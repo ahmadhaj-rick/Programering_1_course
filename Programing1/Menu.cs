@@ -400,6 +400,54 @@ namespace HomeWorkMenu
 
                         break;
 
+                    case 5: // Fifth HomeWork Section - Sub Menu (5)
+
+
+                        int Option_5 = 1;
+                        while (Option_5 != 0) // While Loop  Sub-Menu (5).
+                        {
+                            // Console.WriteLine("Choose an Opetion to execute! ");
+                            Console.WriteLine("\n" +
+                                              "1- Basics of Coding -> 1- Sum of 2 Numbers.\n" +
+                                              "                    -> 2- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 3- Convert Decimal To Whole.\n" +
+                                              "                    -> 4- A salary Calculation App.\n" +
+                                              "                    -> 0- To go Back To Main_Menu.\n" +
+                                              "\n");
+
+                            Option_5 = Convert.ToInt16(Console.ReadLine());
+                            // make a while loop to loop the menu after executing an option 
+                            switch (Option_5) // Sub-Menu 5
+                            {
+                                case 1:
+                                    Console.WriteLine("You Are At ->   " + "\n");
+                                    
+                                    break;
+                                case 2:
+                                    Console.WriteLine("You Are At ->   " + "\n");
+                                                                        
+                                    break;
+                                case 3:
+                                    Console.WriteLine("You Are At ->   " + "\n");
+                                    
+                                    break;
+                                case 4:
+                                    Console.WriteLine("You Are At ->   " + "\n");
+                                    
+                                    break;
+                                default:
+                                    Console.WriteLine("You have Entered an invalid Choice! " + "\n");
+                                    // Menu.Main(); try to bring back the user to start of the
+                                    // program to input a valid choice !!!
+
+                                    break;
+
+                            }
+
+                        } // End While Loop  Sub-Menu (5).
+
+                        break; // End Fifth HomeWork Section - Sub Menu (5)
+
                     default: // Default HomeWork Section - Main Menu (Default)
                         Console.WriteLine("Back To Main Menu.\n");
 
