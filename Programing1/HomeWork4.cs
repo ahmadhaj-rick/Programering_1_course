@@ -65,7 +65,6 @@ namespace Programing1
 
         }
 
-
         public static void SumUpToPrim() // 5.2
         {
             /**
@@ -487,8 +486,6 @@ namespace Programing1
             }
 
         }
-
-
 
         public static void ATM() // 5.8
         {
