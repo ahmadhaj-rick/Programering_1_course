@@ -13,32 +13,72 @@ namespace Programing1
             Skriv ut den nya vektor.
             */
 
-            int[,] numbers = new int[4,4]; // a 2D array with 4x4 
-            int random;
-            Random rnd = new Random();
-            
+            /* help visualize the array 4x4
+                 0 1 2 3
+             0 { 0 1 2 3 }
+             1 { 3 2 1 0 }
+             2 { 0 1 2 3 }
+             3 { 3 2 1 0 }
 
-            for (int i = 0; i < 4; i++)
+           */
+
+            int[,] numbers = new int[4, 4]; // iniate a 4x4 array
+
+            void RandomFill()
             {
-                for (int j = 0; j < 4; j++)
+                Random rnd = new Random();   // initatie and store the random number deivce in rnd
+                int random;
+
+                for (int i = 0; i < 4; i++)
                 {
-                    random = rnd.Next(0, 5);
-                    numbers[i,j] = random;
+                    for (int j = 0; j < 4; j++)
+                    {
+                        random = rnd.Next(0, 5);
+                        numbers[i, j] = random;
+                    }
                 }
+
+            }
+            
+            void SwapFunction()
+            {
+                Console.WriteLine("Select the First Row");
+                int row1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Select the Second row");
+                int row2 = Convert.ToInt32(Console.ReadLine());
+
+                for (int q = 0; q < 4; q++)
+                {
+                    int temp = numbers[row1, q]; // makes a copy of elemnet numbers[row1, q] into temp 
+                    numbers[row1, q] = numbers[row2, q]; // overrides the content of numbers[row1, q] with the content of numbers[row2, q]
+                    numbers[row2, q] = temp; // finally uses the temp to override the content of numbers[row2, q]
+
+                }
+
             }
 
-            for (int i = 0; i < 4; i++)
+            void prettyPrintArray()
             {
-                for (int J = 0; J < 4; J++)
+                Console.WriteLine("The Array is : ");
+                for (int i = 0; i < 4; i++)
                 {
-                    Console.WriteLine("Value:{0} at Index: {1} {2}", numbers[i, J], i, J);
+                    Console.Write(i + "["); // shows row number 
+                    for (int j = 0; j < 4; j++)
+                    {
+                        Console.Write("{0},", numbers[i, j]);
+                    }
+                    Console.Write("]");
+                    Console.WriteLine();
                 }
+
             }
             
-            /*foreach (var number in numbers)
-            {
-                number = new Random();
-            }*/
+            // Calling the Functions 
+            RandomFill();
+            prettyPrintArray();
+            SwapFunction();
+            prettyPrintArray();
 
 
         }
