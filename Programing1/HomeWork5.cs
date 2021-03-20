@@ -3,7 +3,7 @@ namespace Programing1
 {
     public class HomeWork5
     {
-        public void SwitchRowsArray() // 6.1
+        public static void SwitchRowsArray() // 6.1
         {
 
             /*
@@ -13,13 +13,37 @@ namespace Programing1
             Skriv ut den nya vektor.
             */
 
+            int[,] numbers = new int[4,4]; // a 2D array with 4x4 
+            int random;
+            Random rnd = new Random();
+            
 
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    random = rnd.Next(0, 5);
+                    numbers[i,j] = random;
+                }
+            }
 
+            for (int i = 0; i < 4; i++)
+            {
+                for (int J = 0; J < 4; J++)
+                {
+                    Console.WriteLine("Value:{0} at Index: {1} {2}", numbers[i, J], i, J);
+                }
+            }
+            
+            /*foreach (var number in numbers)
+            {
+                number = new Random();
+            }*/
 
 
         }
 
-        public void LettersInCharCounter() // 6.2
+        public static void LettersInCharCounter() // 6.2
         {
 
             /*
@@ -35,7 +59,7 @@ namespace Programing1
 
         }
 
-        public void InputFromUserRepostionArray() //6.3
+        public static void InputFromUserRepostionArray() //6.3
         {
 
             /*
@@ -53,7 +77,7 @@ namespace Programing1
 
         }
 
-        public void MaxMinArray()
+        public static void MaxMinArray()
         {
 
             /*
@@ -69,8 +93,9 @@ namespace Programing1
 
 
 
-        public HomeWork5()
+        public  HomeWork5()
         {
+
         }
     }
 }
