@@ -408,10 +408,19 @@ namespace HomeWorkMenu
                         {
                             // Console.WriteLine("Choose an Opetion to execute! ");
                             Console.WriteLine("\n" +
-                                              "1- Basics of Coding -> 1- Sum of 2 Numbers.\n" +
-                                              "                    -> 2- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 3- Convert Decimal To Whole.\n" +
+                                              "1- Basics of Coding -> 1- Swtiching Rows of a 2D Array.\n" +
+                                              "                    -> 2- Char in a input string.\n" +
+                                              "                    -> 3- Repostion Array Elements And Insert.\n" +
                                               "                    -> 4- A salary Calculation App.\n" +
+                                              "                    -> 5- Find Min And Max Num in an int Arry.\n" +
+                                              "                    -> 6- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 7- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 8- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 9- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 10- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 11- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 12- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 13- Sum of 3 numbers And Medium.\n" +
                                               "                    -> 0- To go Back To Main_Menu.\n" +
                                               "\n");
 
@@ -420,19 +429,19 @@ namespace HomeWorkMenu
                             switch (Option_5) // Sub-Menu 5
                             {
                                 case 1:
-                                    Console.WriteLine("You Are At ->   " + "\n");
-                                    
+                                    Console.WriteLine("You Are At -> 1- Swtiching Rows of a 2D Array." + "\n");
+                                    Programing1.HomeWork5.SwitchRowsArray();
                                     break;
                                 case 2:
-                                    Console.WriteLine("You Are At ->   " + "\n");
+                                    Console.WriteLine("You Are At -> 2- Char in a input string. " + "\n");
                                                                         
                                     break;
                                 case 3:
-                                    Console.WriteLine("You Are At ->   " + "\n");
+                                    Console.WriteLine("You Are At -> 3- Repostion Array Elements And Insert." + "\n");
                                     
                                     break;
                                 case 4:
-                                    Console.WriteLine("You Are At ->   " + "\n");
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
                                     
                                     break;
                                 default:
