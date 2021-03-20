@@ -59,8 +59,19 @@ namespace HomeWorkMenu
                     "                    -> 7- Simple Speed Cam App\n" +
                     "                    -> 8- Simple ATM App\n" +
                     "\n" +
-                    "5-Vectors And Lists -> 1- ....Work in Progress\n" +
-                    "                    -> 2- ....Work in PRogress\n");
+                    "5-Vectors And Lists -> 1- Swtiching Rows of a 2D Array.\n" +
+                    "                    -> 2- Char in a input string.\n" +
+                    "                    -> 3- Repostion Array Elements And Insert.\n" +
+                    "                    -> 4- A salary Calculation App.\n" +
+                    "                    -> 5- Find Min And Max Num in an int Arry.\n" +
+                    "                    -> 6- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 7- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 8- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 9- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 10- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 11- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 12- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 13- Sum of 3 numbers And Medium.\n");
 
                 Console.WriteLine("Enter An Opetion: .....");
                 Main_option = Convert.ToInt16(Console.ReadLine());
@@ -408,7 +419,7 @@ namespace HomeWorkMenu
                         {
                             // Console.WriteLine("Choose an Opetion to execute! ");
                             Console.WriteLine("\n" +
-                                              "1- Basics of Coding -> 1- Swtiching Rows of a 2D Array.\n" +
+                                              "5-Vectors And Lists -> 1- Swtiching Rows of a 2D Array.\n" +
                                               "                    -> 2- Char in a input string.\n" +
                                               "                    -> 3- Repostion Array Elements And Insert.\n" +
                                               "                    -> 4- A salary Calculation App.\n" +
