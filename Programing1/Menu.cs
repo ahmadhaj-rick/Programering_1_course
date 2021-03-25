@@ -445,7 +445,7 @@ namespace HomeWorkMenu
                                     break;
                                 case 2:
                                     Console.WriteLine("You Are At -> 2- Char in a input string. " + "\n");
-                                                                        
+                                    Programing1.HomeWork5.LettersInCharCounter();                                    
                                     break;
                                 case 3:
                                     Console.WriteLine("You Are At -> 3- Repostion Array Elements And Insert." + "\n");
