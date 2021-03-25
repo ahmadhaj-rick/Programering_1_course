@@ -93,9 +93,31 @@ namespace Programing1
             (bokstaven läser du in från tangentbordet).
             Skriv det på skärmen.
             */
+            int counter = 0;
 
+            Console.WriteLine("Enter a Sentence Below to check for repeated Letters: ");
+            char[] myString = Console.ReadLine().ToCharArray();
 
+            
+            Console.WriteLine("Enter The letter you want to check for!\n");
+            char letter = Convert.ToChar(Console.ReadLine());
 
+            for (int i = 0; i < myString.Length; i++)
+            {
+                myString[i] = Char.ToLower(myString[i]);
+                //Console.WriteLine(myString[i]); ghetto debugging 
+            }
+           
+            foreach (char c in myString) // loops trough each char in the char array 
+            {
+                 
+                if (c == letter) // checks the letter agaisnt the char array 
+                {
+                    counter++; // starts from zero and adds up if the IF condition is true 
+                }
+            }
+
+            Console.WriteLine("The {0}, is repeated {1} times", letter, counter);
 
         }
 
