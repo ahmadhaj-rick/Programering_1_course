@@ -117,7 +117,7 @@ namespace Programing1
                 }
             }
 
-            Console.WriteLine("The {0}, is repeated {1} times", letter, counter);
+            Console.WriteLine("The Letter  {0}, is repeated {1} times", letter, counter);
 
         }
 
@@ -133,10 +133,59 @@ namespace Programing1
             Skriv ut den nya vektor på skärmen.
             */
 
+            int[] array21 = new int[21]; // makes array of size 21 last place always empty for swap
+            
+            
+            void RandomFill() 
+            {
+                Random rnd = new Random();
+                int random;
 
+                for (int i = 0; i < array21.Length - 1 ; i++) // random fill the array
+                {
+                    random = rnd.Next(1, 9);
+                    array21[i] = random;
 
+                }
 
+            }
 
+            void PrintArray()
+            {               
+                
+                for (int i = 0; i < array21.Length; i++)
+                {
+                    Console.Write("{0} ", array21[i]);
+                }
+
+            }
+
+            void SwapFunction()
+            {
+
+                Console.WriteLine("Enter the Element you want to store: ");
+                int Element = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter the Index Where you wish to store it: ");
+                int index = Convert.ToInt32(Console.ReadLine());
+
+                int counter = array21.Length;
+
+                for (int i = 20; i > index; i--) // moves the data to the right 
+                {
+
+                    array21[i] = array21[i - 1];
+
+                } // when the loop exits we know the Index requested is empty 
+
+                array21[index] = Element; // we insert the value at the index wanted 
+
+            }
+
+            RandomFill();
+            PrintArray();
+            SwapFunction();
+            PrintArray();
         }
 
         public static void MaxMinArray()
@@ -148,12 +197,71 @@ namespace Programing1
             Hitta därefter min o max i den vektor o skriv den på skärmen
             */
 
+            int[] Array = new int[20];
+            int MaxNum ,MaxIndex; // this will store the MAx Value and Its Index
+            int MinNum, MinIndex; // this will store the Min Value and Its Index
 
+
+            void RandomFill()
+            {
+                Random rnd = new Random();
+                int random;
+
+                for (int i = 0; i < Array.Length; i++)
+                {
+                    random = rnd.Next(0, 10000);
+                    Array[i] = random;
+
+                }
+            }
+
+            void PrintArray()
+            {
+                Console.WriteLine();
+                for (int i = 0; i < Array.Length; i++)
+                {
+                    Console.Write("{0} ", Array[i]);
+                }
+                Console.WriteLine();
+            }
+
+            void MaxMinFuncation()
+            {
+                MaxNum = Array[0];
+                MinNum = Array[0];
+                MaxIndex = 0;
+                MinIndex = 0;
+                Console.WriteLine();
+                for (int i = 0; i < Array.Length; i++)
+                {
+
+                    if (Array[i] > MaxNum)
+                    {
+                        MaxNum = Array[i];
+                        MaxIndex = i + 1;
+                    }
+
+                    if (Array[i] < MinNum)
+                    {
+                        MinNum = Array[i];
+                        MinIndex = i + 1;
+                    }
+
+                }
+                
+                Console.WriteLine("The Max Number Is: {0} at Index : {1}. The Min Number Is: {2} at Index: {3}.", MaxNum, MaxIndex, MinNum, MinIndex);
+                Console.WriteLine();
+
+            }
+
+            RandomFill();
+            PrintArray();
+            MaxMinFuncation();
 
 
         }
 
-
+        public static void 
 
         public  HomeWork5()
         {
