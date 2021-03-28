@@ -422,7 +422,7 @@ namespace HomeWorkMenu
                                               "5-Vectors And Lists -> 1- Swtiching Rows of a 2D Array.\n" +
                                               "                    -> 2- Char in a input string.\n" +
                                               "                    -> 3- Repostion Array Elements And Insert.\n" +
-                                              "                    -> 4- A salary Calculation App.\n" +
+                                              "                    -> 4- Max And Min In Array.\n" +
                                               "                    -> 5- Find Min And Max Num in an int Arry.\n" +
                                               "                    -> 6- Sum of 3 numbers And Medium.\n" +
                                               "                    -> 7- Sum of 3 numbers And Medium.\n" +
@@ -449,11 +449,47 @@ namespace HomeWorkMenu
                                     break;
                                 case 3:
                                     Console.WriteLine("You Are At -> 3- Repostion Array Elements And Insert." + "\n");
-                                    
+                                    Programing1.HomeWork5.InputFromUserRepostionArray();
                                     break;
                                 case 4:
+                                    Console.WriteLine("You Are At -> 4- Max And Min In Array." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 5:
                                     Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 6:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 7:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 8:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 9:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 10:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 11:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 12:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
+                                    break;
+                                case 13:
+                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Programing1.HomeWork5.MaxMinArray();
                                     break;
                                 default:
                                     Console.WriteLine("You have Entered an invalid Choice! " + "\n");
