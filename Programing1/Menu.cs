@@ -62,15 +62,15 @@ namespace HomeWorkMenu
                     "5-Vectors And Lists -> 1- Swtiching Rows of a 2D Array.\n" +
                     "                    -> 2- Char in a input string.\n" +
                     "                    -> 3- Repostion Array Elements And Insert.\n" +
-                    "                    -> 4- A salary Calculation App.\n" +
-                    "                    -> 5- Find Min And Max Num in an int Arry.\n" +
-                    "                    -> 6- Sum of 3 numbers And Medium.\n" +
-                    "                    -> 7- Sum of 3 numbers And Medium.\n" +
-                    "                    -> 8- Sum of 3 numbers And Medium.\n" +
-                    "                    -> 9- Sum of 3 numbers And Medium.\n" +
-                    "                    -> 10- Sum of 3 numbers And Medium.\n" +
-                    "                    -> 11- Sum of 3 numbers And Medium.\n" +
-                    "                    -> 12- Sum of 3 numbers And Medium.\n" +
+                    "                    -> 4- Find Min And Max Num in an int Arry.\n" +
+                    "                    -> 5- Counting accournce of Negtive and Postive Nums.\n" +
+                    "                    -> 6- Mirro Flip Array From Center.\n" +
+                    "                    -> 7- Sort Array Lowest To Highest.\n" +
+                    "                    -> 8- Sum Of Elements in the Array.\n" +
+                    "                    -> 9- Shifting And Zeroing Elements.\n" +
+                    "                    -> 10- Shifting from the Center to the Left.\n" +
+                    "                    -> 11- Elements Odd Or Even ?.\n" +
+                    "                    -> 12- Elements Prime Or Nah ?.\n" +
                     "                    -> 13- Sum of 3 numbers And Medium.\n");
 
                 Console.WriteLine("Enter An Opetion: .....");
@@ -423,14 +423,14 @@ namespace HomeWorkMenu
                                               "                    -> 2- Char in a input string.\n" +
                                               "                    -> 3- Repostion Array Elements And Insert.\n" +
                                               "                    -> 4- Max And Min In Array.\n" +
-                                              "                    -> 5- Find Min And Max Num in an int Arry.\n" +
-                                              "                    -> 6- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 7- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 8- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 9- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 10- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 11- Sum of 3 numbers And Medium.\n" +
-                                              "                    -> 12- Sum of 3 numbers And Medium.\n" +
+                                              "                    -> 5- Counting accournce of Negtive and Postive Nums.\n" +
+                                              "                    -> 6- Mirro Flip Array From Center.\n" +
+                                              "                    -> 7- Sort Array Lowest To Highest.\n" +
+                                              "                    -> 8- Sum Of Elements in the Array.\n" +
+                                              "                    -> 9- Shifting And Zeroing Elements.\n" +
+                                              "                    -> 10- Shifting from the Center to the Left.\n" +
+                                              "                    -> 11- Elements Odd Or Even ?.\n" +
+                                              "                    -> 12- Elements Prime Or Nah ?.\n" +
                                               "                    -> 13- Sum of 3 numbers And Medium.\n" +
                                               "                    -> 0- To go Back To Main_Menu.\n" +
                                               "\n");
@@ -456,39 +456,39 @@ namespace HomeWorkMenu
                                     Programing1.HomeWork5.MaxMinArray();
                                     break;
                                 case 5:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 5- Counting accournce of Negtive and Postive Nums." + "\n");
+                                    Programing1.HomeWork5.CountNegtivePostiveNums();
                                     break;
                                 case 6:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 6- Mirro Flip Array From Center.\n" + "\n");
+                                    Programing1.HomeWork5.MirroFlipArray();
                                     break;
                                 case 7:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 7- Sort Array Lowest To Highest.\n" + "\n");
+                                    Programing1.HomeWork5.SortLowestToHighest();
                                     break;
                                 case 8:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 8- Sum Of Elements in the Array.\n" + "\n");
+                                    Programing1.HomeWork5.SumOfElements();
                                     break;
                                 case 9:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 9- Shifting And Zeroing Elements.\n" + "\n");
+                                    Programing1.HomeWork5.ShiftingAndZeroing();
                                     break;
                                 case 10:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 10- Shifting from the Center to the Left.\n" + "\n");
+                                    Programing1.HomeWork5.ShiftCenterToLeft();
                                     break;
                                 case 11:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 11- Elements Odd Or Even ?.\n" + "\n");
+                                    Programing1.HomeWork5.OddOrEvenElement();
                                     break;
                                 case 12:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
+                                    Console.WriteLine("You Are At -> 12- Elements Prime Or Nah ?.\n" + "\n");
+                                    Programing1.HomeWork5.PrimeOrNahElement();
                                     break;
                                 case 13:
-                                    Console.WriteLine("You Are At -> 4- A salary Calculation App." + "\n");
+                                    Console.WriteLine("You Are At -> 13- A salary Calculation App." + "\n");
                                     Programing1.HomeWork5.MaxMinArray();
                                     break;
                                 default:
