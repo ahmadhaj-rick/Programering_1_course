@@ -541,6 +541,39 @@ namespace Programing1
                 }
             }
 
+            void Shifting()
+            {
+
+                for (int i = 0; i < 9; i++)
+                {
+                    arr[i + 12] = arr[21 + i];
+                    Console.Write("{0}, ", arr[i + 12]);
+                }
+                Console.WriteLine("Shifting!");// ghetto debuggin
+
+                for (int j = 0; j < 9; j++)
+                {
+                    arr[arr.Length - j - 1] = 0;
+                    Console.Write("{0}, ", arr[arr.Length - j - 1]);
+                }
+                Console.WriteLine("Zeroing!"); // ghetto debugging
+
+                Console.WriteLine();
+            }
+
+            void PrintArr()
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Console.Write("{0} ,", arr[i]);
+                }
+                Console.WriteLine();
+            }
+
+            RandomFill();
+            PrintArr();
+            Shifting();
+            PrintArr();
 
 
         }
@@ -554,6 +587,47 @@ namespace Programing1
              * och fyll i sista platsen med 0.
              * Därefter skriv "den nya" vektor på skärmen.
              */
+
+            int[] arr = new int[21];
+
+            void RandomFill()
+            {
+
+                Random rnd = new Random();
+                int Random;
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Random = rnd.Next(1, 1000);
+                    arr[i] = Random;
+                }
+            }
+
+            void Shifting()
+            {
+
+                for (int i = 0; i < arr.Length / 2 ; i++)
+                {
+                    arr[i + 10] = arr[i];
+                    arr[i] = 0;
+
+                }
+            }
+
+            void PrintArr()
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Console.Write("{0} ,",arr[i]);
+                }
+                Console.WriteLine();
+            }
+
+            RandomFill();
+            PrintArr();
+            Shifting();
+            PrintArr();
+            
+
 
 
         }
