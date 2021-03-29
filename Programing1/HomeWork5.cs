@@ -517,7 +517,6 @@ namespace Programing1
 
         }
 
-
         public static void ShiftingAndZeroing() //6.9
         {
             /*skapa en vektor med 30 platser. Fyll i vektor med metoden Random.
