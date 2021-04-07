@@ -42,7 +42,6 @@ namespace Programing1
             
         }
 
-
         public static void CountingUp2Input() // 4.2
         {
 
@@ -66,7 +65,6 @@ namespace Programing1
 
             
         }
-
 
         public static void CountingUp2Input2() // 4.3
         {
@@ -104,8 +102,6 @@ namespace Programing1
             }
         }
 
-
-
         public static void FibonacciSequence() // 4.4
         {
             /**
@@ -141,8 +137,6 @@ namespace Programing1
             }
         }
 
-
-
         public static void PrimeCheck() //4.5
         {
             /**
@@ -171,7 +165,7 @@ namespace Programing1
                 if (num == 1) { return false; }
                 if (num == 2) { return true; }
 
-                for (int counter = 2; counter < num; counter++)
+                for (int counter = 2; counter <= Math.Sqrt(num); counter++)
                 {
                     if (num % counter == 0) { return false; }
                 }
@@ -264,7 +258,7 @@ namespace Programing1
                 if (num == 1) { return true; }
                 if (num == 2) { return true; }
 
-                for (int counter = 2; counter < num; counter++)
+                for (int counter = 2; counter <= Math.Sqrt(num); counter++)
                 {
                     if (num % counter == 0) { return false; }
                 }
@@ -332,8 +326,6 @@ namespace Programing1
 
         }
 
-        public HomeWork3()
-        {
-        }
+        
     }
 }

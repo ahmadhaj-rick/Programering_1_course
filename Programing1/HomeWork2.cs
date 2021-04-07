@@ -555,10 +555,5 @@ namespace Programing1
 
         }
 
-        public HomeWork2()
-        {
-
-        }
-
     }
 }

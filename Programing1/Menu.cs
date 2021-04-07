@@ -70,8 +70,7 @@ namespace HomeWorkMenu
                     "                    -> 9- Shifting And Zeroing Elements.\n" +
                     "                    -> 10- Shifting from the Center to the Left.\n" +
                     "                    -> 11- Elements Odd Or Even ?.\n" +
-                    "                    -> 12- Elements Prime Or Nah ?.\n" +
-                    "                    -> 13- Sum of 3 numbers And Medium.\n");
+                    "                    -> 12- Elements Prime Or Nah ?.\n");
 
                 Console.WriteLine("Enter An Opetion: .....");
                 Main_option = Convert.ToInt16(Console.ReadLine());
@@ -486,10 +485,6 @@ namespace HomeWorkMenu
                                 case 12:
                                     Console.WriteLine("You Are At -> 12- Elements Prime Or Nah ?.\n" + "\n");
                                     Programing1.HomeWork5.PrimeOrNahElement();
-                                    break;
-                                case 13:
-                                    Console.WriteLine("You Are At -> 13- A salary Calculation App." + "\n");
-                                    Programing1.HomeWork5.MaxMinArray();
                                     break;
                                 default:
                                     Console.WriteLine("You have Entered an invalid Choice! " + "\n");

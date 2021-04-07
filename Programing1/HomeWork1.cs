@@ -21,7 +21,6 @@ namespace Programing1
             Console.ReadLine();
         }
 
-
         public static void Sum3NumsAndMedium() // 2.2
         {
             /**
@@ -46,7 +45,6 @@ namespace Programing1
             Console.WriteLine(medium);
             Console.ReadLine();
         }
-
 
         public static void DecToWhole() // 2.3
         {
@@ -125,13 +123,6 @@ namespace Programing1
             Console.ReadLine();  // wait for input to exit the program 
 
         }
-
-
-        public void SomeMethod()
-        {
-
-        }
-
 
     }
 }

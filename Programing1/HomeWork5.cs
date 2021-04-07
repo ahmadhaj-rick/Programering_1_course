@@ -759,7 +759,7 @@ namespace Programing1
                 if (num == 1) { return true; }
                 if (num == 2) { return true; }
 
-                for (int counter = 2; counter < num; counter++)
+                for (int counter = 2; counter <= Math.Sqrt(num); counter++)
                 {
                     if (num % counter == 0) { return false; }
                 }

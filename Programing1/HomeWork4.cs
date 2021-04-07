@@ -8,7 +8,6 @@ namespace Programing1
     public class HomeWork4
     {
 
-
         public static void MethodTypes() // 5.1 
         {
 
@@ -126,7 +125,7 @@ namespace Programing1
                 if (num == 1) { return true; }
                 if (num == 2) { return true; }
 
-                for (int counter = 2; counter < num; counter++)
+                for (int counter = 2; counter <= Math.Sqrt(num); counter++)
                 {
                     if (num % counter == 0) { return false; }
                 }
@@ -344,15 +343,13 @@ namespace Programing1
                     }
                 }
 
-                void ShowResult()
+                void ShowResult() // fix the path parameter, it works local not on others .
                 {
                     string result = Name + " " + storage;
                     File.WriteAllText("/Users/0x0sp1d3r/Desktop/Programing_1/Programing1/Programing1/Results.txt", result);
                     var resultRead = File.ReadAllText("/Users/0x0sp1d3r/Desktop/Programing_1/Programing1/Programing1/Results.txt");
                     System.Console.WriteLine(resultRead);
-                    //Console.WriteLine(result + "Var"); // ghetto Debugging
-                    //Console.WriteLine(Name + "Var"); // ghetto Debugging
-                    //Console.WriteLine(storage + "Var"); // ghetto Debugging
+
                 }
 
                 
@@ -412,7 +409,7 @@ namespace Programing1
                 if (num == 1) { return false; }
                 if (num == 2) { return true; }
 
-                for (int counter = 2; counter < num; counter++)
+                for (int counter = 2; counter < Math.Sqrt(num); counter++)
                 {
                     if (num % counter == 0) { return false; }
                 }
