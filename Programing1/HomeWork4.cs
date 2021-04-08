@@ -346,10 +346,18 @@ namespace Programing1
                 void ShowResult() // fix the path parameter, it works local not on others .
                 {
                     string result = Name + " " + storage;
-                    File.WriteAllText("/Users/0x0sp1d3r/Desktop/Programing_1/Programing1/Programing1/Results.txt", result);
-                    var resultRead = File.ReadAllText("/Users/0x0sp1d3r/Desktop/Programing_1/Programing1/Programing1/Results.txt");
-                    System.Console.WriteLine(resultRead);
-
+                    //create the file, since its running in a new Enviroment
+                    if (!File.Exists("Results.txt")) // checks if the file is there if not it creates it inside the debug folder
+                    {
+                        File.Create("Results.txt"); // the app has to restart to close the Stream IO after creating it 
+                        
+                    }
+                    if (File.Exists("Results.txt"))
+                    {
+                        File.WriteAllText("Results.txt", result);
+                        var resultRead = File.ReadAllText("Results.txt");
+                        System.Console.WriteLine(resultRead);
+                    }
                 }
 
                 
@@ -516,7 +524,7 @@ namespace Programing1
                     "                   -> 1- Withdraw Monies. \n" +
                     "                   -> 2- Deposit Monies \n" +
                     "                   -> 3- To See How much Monies you have. \n" +
-                    "                   -> 4- To Exit. \n");
+                    "                   -> 0- To Exit. \n");
                 Options = Convert.ToInt16(Console.ReadLine());
                 switch (Options)
                 {
@@ -525,7 +533,7 @@ namespace Programing1
                         Console.WriteLine("Enter the Ammout you wish to withdraw: ...\n");
                         num = Convert.ToDouble(Console.ReadLine());
                         Withdraw(num);
-                        Console.WriteLine(Balance);
+                        //Console.WriteLine(Balance);
                         break;
 
                     case 2:
@@ -538,8 +546,12 @@ namespace Programing1
                         Console.WriteLine("Your Current Balance is {0} \n", Balance);
                         break;
 
+                    case 0:
+                        Console.WriteLine("GoodBye! Thank you for using our monies ATM.");
+                        break;
+
                     default:
-                        Console.WriteLine("Thank you For Using our Monies System!\n");
+                        Console.WriteLine("Not a Valid Option !!\n");
                         break;
 
 
@@ -551,10 +563,18 @@ namespace Programing1
             double Withdraw(double num) // Taking monies Out 
             {
                 double NewBalance;
-
-                NewBalance = Balance - num; // Makes the 
-                Console.WriteLine("Operation was much sucess vry nice");
-                return Balance = NewBalance;
+                if (num <= Balance)
+                {
+                    NewBalance = Balance - num; // Makes the 
+                    Console.WriteLine("Operation was much sucess vry nice");
+                    return Balance = NewBalance;
+                }
+                else
+                {
+                    Console.WriteLine("Operation failed!!. the ammount {0} you entered, Exceed your Balance {1}.",num,Balance);
+                    return Balance;
+                }
+                
 
             }
 
