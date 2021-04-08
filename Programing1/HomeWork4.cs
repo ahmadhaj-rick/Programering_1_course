@@ -79,34 +79,24 @@ namespace Programing1
             Console.Write("Enter a number to count up to and sum all the primes in between! : .. ");
             int num = Convert.ToInt32(Console.ReadLine());
             
-            // sincec i'm stubborn this is the while do method :3 
+            // sincec i'm stubborn this is the while do loop :3 
             do
              {
-                //int counter = 1:
-                //int result = 0;
                 if (IsPrime(counter))
                 {
-                    //Console.WriteLine(result + "result Stage1\n");
-                   // Console.WriteLine(counter + "counter Stage1\n");
-                    
                     result += counter;
                     counter++;
-                   
-                    //Console.WriteLine(result + "result Stage2\n");
-                    //Console.WriteLine(counter + "counter Stage2\n");
                 }
                 else
                 {
                     counter++;
-                    //Console.WriteLine(counter + "not prime!\n");
                 }
              } while (counter != num);
             
             Console.WriteLine("the sum of primes up to " + num + " is " + result);
-            //end of the while do method xD
+            //end of the while do loop xD
 
-            // this is the for loop method 
-
+            // this is the for loop  
             for (int i = 1; i <= num; i++)
             {
                 if (IsPrime(i))
@@ -117,8 +107,8 @@ namespace Programing1
             }
             
             Console.WriteLine("the sum of primes up to " + num + " is " + result2);
-
             //end of the for loop method
+
             static bool IsPrime(int num)
             {
                 if (num == 0) { return false; }
@@ -146,11 +136,13 @@ namespace Programing1
             **/
 
             /**
-              i can't implemnt >>> let X be the width , let y be the height. to calc x => [x = (arh * y) / arw ] . to calc y => [y = (arw * x ) / arh] , a  
-              
-              easier to implemnt >>>> aspect ratio W:H, the [width = W * X] , [height = H * X ] , where x is a base relitve number to both. 
+              i can't implemnt >>> let X be the width , let y be the height.
+              to calc x => [x = (arh * y) / arw ] . to calc y => [y = (arw * x ) / arh] , a  
+              easier to implemnt >>>> aspect ratio W:H, the [width = W * X] , [height = H * X ] ,
+              where x is a base relitve number to both. 
               let D be the diagnol > sqrt(d) = sqrt(W * X) + sqrt(H * X) >> x = d / sqrt(W + H) . we find X and use it.   
             **/
+
             // Varibels section !!
 
             double h; // height
@@ -174,26 +166,19 @@ namespace Programing1
 
             // End of Input Value from user 
 
-            // Logic 
-
+            // Logic
 
             double ratio1 = Math.Pow(arw,2) + Math.Pow(arh,2); // Calculating the sum of the power to 2 of the ratio
-            // Console.WriteLine(ratio1); ghetto debugging xD
             
             double common = Math.Sqrt(ratio1); // Square rooting the sum of the ratio 
-            //Console.WriteLine(common); ghetto debugging xD
 
-            double rationDia = d / common; // Dividing the Diagnol on the square root of the sum of the ratio >> gives us X the reltive number. 
-            //Console.WriteLine(rationDia); ghetto debugging xD
+            double rationDia = d / common; // Dividing the Diagnol on the square root of the sum of the ratio >> gives us X the reltive number.
 
             w = rationDia * arw; // use X to figure out the Width 
             h = rationDia * arh; // use X to figure out the Height 
 
             Console.WriteLine("The Width of the TV is : " + w + "\n");
             Console.WriteLine("The Height of the TV is : " + h + "\n");
-
-
-
         }
 
         public static void GuessingGame() // 5.4
@@ -225,14 +210,13 @@ namespace Programing1
             
             while( Exit != 0)
             {
-                Console.WriteLine(RandNum); // ghetto debugging
 
                 Console.WriteLine("Welcome to the game Menu. YOu have three Options: \n" +
-                                  "1- Start Game! \n " +
-                                  "2- Show your result! \n" +
-                                  "3- Exit the game! \n");
-                int option = Convert.ToInt16(Console.ReadLine());
+                                  "1- Start Game!\n " +
+                                  "2- Show your result!\n" +
+                                  "3- Exit the game!\n");
 
+                int option = Convert.ToInt16(Console.ReadLine());
 
                 switch (option)
                 {
@@ -241,29 +225,20 @@ namespace Programing1
 
                         break;
                     case 2:
-                        /**
-                        if (storage != null)  // trying to debugg async method (kml rn :( ) 
-                        {
-                            ShowResult();
-                        }
-                        else // trying to debugg async method (kml rn :( ) 
-                        {
-                            Console.WriteLine("No Results Has been saved yet!!");
-                        }
-                        **/
                         ShowResult();
 
                         break;
                     default:
                         Console.WriteLine("Thank you for Playing!");
                         Exit = 0;
+
                         break;
 
 
                 }
 
 
-                void PlayGame() // thefunction to play the game, uses CheckInput(); CheckAnswer(); Functions.
+                void PlayGame() // the function to play the game, uses CheckInput(); CheckAnswer(); Functions.
                 {
 
                     Console.WriteLine("This is a Guess the Number Game, the number is between [0-20].\n" +
@@ -274,9 +249,6 @@ namespace Programing1
 
                     while (GuessCounter != 4 && inputGuess != RandNum)
                     {
-
-
-
                         Console.WriteLine("Please Enter your guess Between [0 - 20]");
                         GuessCounter++;
                         var UserInput = Console.ReadLine(); // Varible that used in the TryParse function 
@@ -290,7 +262,6 @@ namespace Programing1
                             Console.WriteLine("You have entered {0}, Which is not a valid number", inputGuess);
                         }
 
-
                         Console.WriteLine("You have tried {0}", GuessCounter);
 
                     }
@@ -299,7 +270,7 @@ namespace Programing1
 
 
                 bool CheckInput(string UserInput) // checks if the user entered a number. returns out a boolean value
-                {                                   // returns a True or False to help in the If Else statment.
+                {                                 // returns a True or False to help in the If Else statment.
 
                     if (int.TryParse(UserInput, out inputGuess)) // takes in the input and sends it out to inputguess 
                     {
@@ -359,14 +330,7 @@ namespace Programing1
                         System.Console.WriteLine(resultRead);
                     }
                 }
-
-                
-
             }
-
-
-
-
         }
 
         public static void PrimCounter() // 5.5
@@ -401,11 +365,7 @@ namespace Programing1
                 if(counter == n) // checking if we reached the number desired from the user
                 {
                     Status = false;
-                }else{
-                    //Console.WriteLine("Calculating");
                 }
-
-
 
                 NumGen++; // incriminting the value of the number generator-ish
             }
@@ -533,7 +493,6 @@ namespace Programing1
                         Console.WriteLine("Enter the Ammout you wish to withdraw: ...\n");
                         num = Convert.ToDouble(Console.ReadLine());
                         Withdraw(num);
-                        //Console.WriteLine(Balance);
                         break;
 
                     case 2:
@@ -547,7 +506,7 @@ namespace Programing1
                         break;
 
                     case 0:
-                        Console.WriteLine("GoodBye! Thank you for using our monies ATM.");
+                        Console.WriteLine("GoodBye! Thank you for using our monies ATM.\n");
                         break;
 
                     default:
@@ -586,11 +545,6 @@ namespace Programing1
                 return Balance = NewBalance;
 
             }
-
-
-
         }
-
     }
-
 }

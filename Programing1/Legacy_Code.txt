@@ -1,5 +1,16 @@
 <<<<<<< HEAD
 ﻿
+                        /**
+                        if (storage != null)  // trying to debugg async method (kml rn :( ) 
+                        {
+                            ShowResult();
+                        }
+                        else // trying to debugg async method (kml rn :( ) 
+                        {
+                            Console.WriteLine("No Results Has been saved yet!!");
+                        }
+                        **/
+
 // a 2D array with 4x4 
             //  empty var
 

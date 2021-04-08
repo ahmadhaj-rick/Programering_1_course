@@ -245,8 +245,6 @@ namespace Programing1
                     {
                         Console.WriteLine("The Number " + counter + " Is a Prime number ");
                     }
-                    
-
                 }
 
             }
