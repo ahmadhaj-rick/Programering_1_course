@@ -606,10 +606,9 @@ namespace Programing1
 
                 for (int i = 0; i < arr.Length / 2 ; i++)
                 {
-                    arr[i + 10] = arr[i];
-                    arr[i] = 0;
-
+                    arr[i + 10] = arr[i + 10 + 1];
                 }
+                arr[arr.Length - 1] = 0;
             }
 
             void PrintArr()
