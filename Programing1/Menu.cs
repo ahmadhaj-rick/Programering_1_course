@@ -70,7 +70,10 @@ namespace HomeWorkMenu
                     "                    -> 9- Shifting And Zeroing Elements.\n" +
                     "                    -> 10- Shifting from the Center to the Left.\n" +
                     "                    -> 11- Elements Odd Or Even ?.\n" +
-                    "                    -> 12- Elements Prime Or Nah ?.\n");
+                    "                    -> 12- Elements Prime Or Nah ?.\n" +
+                    "\n" +
+                    "6-OOP  Projects     -> 1- Tournament Tabel Of Players.\n" +
+                    "                    -> 2- under conustruction.\n");
 
                 Console.WriteLine("Enter An Opetion: .....");
                 Main_option = Convert.ToInt16(Console.ReadLine());
@@ -488,9 +491,6 @@ namespace HomeWorkMenu
                                     break;
                                 default:
                                     Console.WriteLine("You have Entered an invalid Choice! " + "\n");
-                                    // Menu.Main(); try to bring back the user to start of the
-                                    // program to input a valid choice !!!
-
                                     break;
 
                             }
@@ -498,7 +498,9 @@ namespace HomeWorkMenu
                         } // End While Loop  Sub-Menu (5).
 
                         break; // End Fifth HomeWork Section - Sub Menu (5)
-
+                    case 6:
+                        
+                        break;
                     default: // Default HomeWork Section - Main Menu (Default)
                         Console.WriteLine("Back To Main Menu.\n");
 
