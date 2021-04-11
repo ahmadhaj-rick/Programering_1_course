@@ -499,7 +499,7 @@ namespace HomeWorkMenu
 
                         break; // End Fifth HomeWork Section - Sub Menu (5)
                     case 6:
-                        
+                        Programing1.Final_Project_Run.Run();
                         break;
                     default: // Default HomeWork Section - Main Menu (Default)
                         Console.WriteLine("Back To Main Menu.\n");
