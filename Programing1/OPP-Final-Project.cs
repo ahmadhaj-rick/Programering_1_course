@@ -30,7 +30,7 @@ namespace Programing1
         {
             Console.Clear();
 
-            Players[] tabel = new Players[10];
+            Players[] tabel = new Players[10]; // Main Array of type Players 
             int ageLimit = 18;
 
             int Option = 1;
@@ -45,6 +45,8 @@ namespace Programing1
                               "6- Random fill for debugging.\n" +
                               "7- Ranking Players \n" +
                               "0- To Exit The Table App.\n");
+
+
                 while (true)
                 {
                     try
@@ -67,9 +69,43 @@ namespace Programing1
                 switch (Option)
                 {
                     case 1:
-                        SearchPlayers();
+                        while (true)
+                        {
+                            Console.WriteLine("" +
+                                              "This is the Search Menu, enter a key to choose!!\n" +
+                                              "[N]Show Players within a record range.\n" +
+                                              "[R]Show a Player based on Rank/placemnet.\n" +
+                                              "[A]Show Players within Age range.\n" +
+                                              "[E] To exit to the main Menu.\n");
 
-                        break;
+                            ConsoleKeyInfo charInput = Console.ReadKey(true);
+                            switch (charInput.Key)
+                            {
+                                case ConsoleKey.N:
+                                    searchTime();
+                                    break;
+
+                                case ConsoleKey.R:
+                                    searchRank();
+                                    break;
+
+                                case ConsoleKey.A:
+                                    searchAge();
+                                    break;
+                                case ConsoleKey.E:
+                                    //will take you back to main menu ?? maybe ??
+                                    break; 
+                                default:
+                                    Console.WriteLine("Please Enter an Option From the Menu!\n");
+                                    continue;// this will keep you inside the swtich while break; will exit the swtich 
+
+                            }
+                            break;// this will break/exit the loop 
+                        }
+
+                        break; // the case break 
+
+                        
                     case 2:
                         PrintPlayers();
 
@@ -90,9 +126,7 @@ namespace Programing1
                         Console.WriteLine("!!Random Fill for testing the array!!");
                         RandomFill();
                         break;
-                    case 7:
-                        Ranking();
-                        break;
+                    
                     default:
                         Console.Clear();
                         Console.WriteLine("Thank you for using our App, GoodBye!!!");
@@ -107,25 +141,127 @@ namespace Programing1
             }
 
             // Defining Methods
-            void SearchPlayers()
+
+
+
+            void searchAge() // Looks for age rang from input
             {
                 Console.Clear();
+                Console.WriteLine("----------Requested Player Based On Age Rank----------\n");
 
+                try
+                {
+                    Console.WriteLine("Enter the first number, Where the range start: ");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the Second number, Where the range end: ");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
 
+                    for (int i = 0; i < tabel.Length; i++)
+                    {
+                        if (tabel[i].Time >= num1 && tabel[i].Time <= num2)
+                        {
+                            Console.WriteLine("{0}; Player: {1}; Age: {2}; Time: {3}", i, tabel[i].Name, tabel[i].Age, tabel[i].Time);
+                        }
+                    }
 
+                }
+                catch (NullReferenceException)
+                {
+                    Console.WriteLine("The Table, Can't search an empty tabel!!");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please Enter a number!!!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
                 Console.WriteLine("--------------------------------------------------");
+
             }
+
+
+
+
+            void searchTime() // looks for records rang from input
+            {
+                Console.Clear();
+                Console.WriteLine("----------Requested Player Based On Time Range----------\n");
+
+                try
+                {
+                    Console.WriteLine("Enter the first number, Where the range start: ");
+                    double num1 = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter the Second number, Where the range end: ");
+                    double num2 = Convert.ToDouble(Console.ReadLine());
+
+                    for (int i = 0; i < tabel.Length; i++)
+                    {
+                        if (tabel[i].Time >= num1 && tabel[i].Time <= num2)
+                        {
+                            Console.WriteLine("{0}; Player: {1}; Age: {2}; Time: {3}", i, tabel[i].Name, tabel[i].Age, tabel[i].Time);
+                        }
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                    Console.WriteLine("The Table, Can't search an empty tabel!!");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please Enter a number!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                Console.WriteLine("--------------------------------------------------");
+
+
+            }
+
+
+
+            void searchRank() // prints out rank from input
+            {
+                Console.Clear();
+                Console.WriteLine("----------Requested Player Based On Rank----------\n");
+
+                try
+                {
+                    Ranking();
+                    Console.WriteLine("Enter the Rank you would like to See!!");
+                    int pos = Convert.ToInt16(Console.ReadLine());
+                    Console.WriteLine("{0}; Player: {1}; Age: {2}; Time: {3}");
+
+                }
+                catch (NullReferenceException)
+                {
+                    Console.WriteLine("The Table, Can't search an empty tabel!!");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please Enter a whole number!!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                Console.WriteLine("--------------------------------------------------");
+
+
+            }
+
+      
 
             void PrintPlayers()
             {
-                /*
-                for (int i = 0; i < tabel.Length; i++)
-                {
-                    Console.WriteLine("Player : {0}, Age: {1}, Time: {3}");
-                }
-                */
+                
                 Console.Clear();
                 Console.WriteLine("----------Table Of Players----------\n");
+
+                Ranking();
 
                 int place = 0;
                 foreach (Players player in tabel)
@@ -143,81 +279,10 @@ namespace Programing1
 
                 Console.WriteLine("----------Table Of Players----------\n");
 
-                //comment section broke my shit!!!!!!! moved it to seperate method
-                //Copy then linear sort lowest to hightest. Ranking() funcation.
-                /*
-                Console.WriteLine("----------Ranking----------");
-                
-               
-                try
-                {
-                    double FirstPlace=0, SecondPlace = tabel[2].Age, ThirdPlace = tabel[2].Age;
-                    int FirstIndex = 0, SecondIndex = 0, ThirdIndex = 0;
-                    for (int i = 0; i < tabel.Length; i++) // finding first, second and third place linear sorting
-                    {
-                        /*
-                        if (tabel[i] != null)
-                        {
-                            if (tabel[i].Age < FirstPlace)
-                            {
-                                FirstPlace = tabel[i].Age;
-                                FirstIndex = i;
-                            }
-                            if (tabel[i].Age < SecondPlace && tabel[i].Age < FirstPlace)
-                            {
-                                SecondPlace = tabel[i].Age;
-                                SecondIndex = i;
-                            }
-                            if (tabel[i].Age < ThirdPlace && tabel[i].Age < SecondPlace)
-                            {
-                                ThirdPlace = tabel[i].Age;
-                                ThirdIndex = i;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Row {0} is empty", i + 1);
-                        }
-                        */
-                /*
-                if (tabel[i].Age < FirstPlace)
-                {
-                    ThirdPlace = SecondPlace;
-                    SecondPlace = FirstPlace;
-                    FirstPlace = tabel[i].Age;
-                    FirstIndex = i;
-                }
-                else if (tabel[i].Age < SecondPlace)
-                {
-                    ThirdPlace = SecondPlace;
-                    SecondPlace = tabel[i].Age;
-                    SecondIndex = i;
-                }
-                else if (tabel[i].Age < ThirdPlace)
-                {
-                    ThirdPlace = tabel[i].Age;
-                    ThirdIndex = i;
-                }
-
             }
 
-            Console.WriteLine("1-First Place Goes To {0} at Record of {1}sec.\n2-Second Place Goes To {2} at Record of {3}sec.\n-3 Third Place Goes to {4} at Record of {5}sec.\n",
-                       tabel[FirstIndex].Name, tabel[FirstIndex].Time,
-                       tabel[SecondIndex].Name, tabel[SecondIndex].Time,
-                       tabel[ThirdIndex].Name, tabel[ThirdIndex].Time);
-        }
-        catch (NullReferenceException)
-        {
-            Console.WriteLine("The Tournament isn't Full thus can't make an accurate decession!!");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex);
-            Console.WriteLine("There is less than three players to give ranking!!");
-        }
-        */
 
-            }
+
 
             void AverageAge()
             {
@@ -250,6 +315,9 @@ namespace Programing1
 
                 Console.WriteLine("----------Average Age Of Players----------\n");
             }
+
+
+
 
             void AddPlayers()
             {
@@ -397,11 +465,11 @@ namespace Programing1
                     Console.WriteLine("The Player is too young to participate in the Tournament!!!.\n");
                 }
 
-
-
-
                 Console.WriteLine("----------Regestering Players----------\n");
+
             }
+
+
 
             void RemovePlayers()
             {
@@ -440,6 +508,7 @@ namespace Programing1
                 Console.WriteLine("----------Removing A Players----------\n");
             }
 
+
             void RandomFill()
             {
                 Console.Clear();
@@ -451,11 +520,6 @@ namespace Programing1
                 string debugg;
                 for (int i = 0; i < tabel.Length; i++)
                 {
-                    /*
-                    tabel[i].Age = randomAge;
-                    tabel[i].Time = randomTime;
-                    tabel[i].Name = "Debugging";
-                    */
                     randomTime = rnd.Next(1, 25);
                     randomAge = rnd.Next(18, 45);
                     debugg = "Debugging " + i;
@@ -465,67 +529,41 @@ namespace Programing1
                 Console.WriteLine("----------Random Fill Players----------\n");
 
             }
-
+            
             void Ranking()
             {
-                Console.Clear();
-                Console.WriteLine("----------RANKING----------\n");
-
-                Players[] tmp = new Players[11];
-                //tmp = tabel;
-                int rank = 0;
-
-                for (int i = 0; i < tabel.Length; i++)
+                try
                 {
-                    tmp[i] = tabel[i];
-                    
-                }
-                Console.WriteLine("Copy Done!!");
-
-                Console.WriteLine("!!Ranking!!");
-                for (int i = 0; i < tmp.Length - 1 ; i++)
-                {
-                    for (int j = i + 1; j < tmp.Length - 1; j++)
+                    for (int i = 0; i < tabel.Length; i++)
                     {
-                        /*checking for time not age dumbass!
-                         * plus i need to move the whole object not just the child {age or time or name}
-                        if (tmp[i].Age > tmp[j].Age)
+                        for (int j = i + 1; j < tabel.Length; j++)
                         {
-                            tmp[10].Age = tmp[i].Age;
-                            tmp[i].Age = tmp[j].Age;
-                            tmp[j].Age = tmp[11].Age;
+                            // checks for time and moves the whole object
+                            if (tabel[i].Time > tabel[j].Time) //Linear search >>
+                            {
+                                var Tmp = tabel[i];
+                                tabel[i] = tabel[j];
+                                tabel[j] = Tmp;
+
+                            }
+
 
                         }
-                        */
-                        // checks for time and moves the whole object
-                        //Linear search >>
-                        if (tmp[i].Time > tmp[j].Time) 
-                        {
-                            tmp[10] = tmp[i];
-                            tmp[i] = tmp[j];
-                            tmp[j] = tmp[10];
-
-                        }
-                       
-
                     }
                 }
-
-                Console.WriteLine("Result.\n");
-                foreach (Players players in tmp)
+                catch (NullReferenceException)
                 {
-                    rank++;
-
-                    Console.WriteLine("Rank:{0}, Player:{1}, Age:{2}, Record:{3}sec.", rank, players.Name, players.Age, players.Time);
+                    Console.WriteLine("No Ranks to show Table is empty");
                 }
-
-                Console.WriteLine("----------RANKING----------\n");
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
 
             }
 
+
         }
-
-
 
 
     }
