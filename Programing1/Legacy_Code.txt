@@ -1,5 +1,136 @@
 <<<<<<< HEAD
-﻿
+            //Players[] tmp = new Players[10]; // Array Used to rank players 
+/*
+                for (int i = 0; i < tabel.Length; i++)
+                {
+                    Console.WriteLine("Player : {0}, Age: {1}, Time: {3}");
+                }
+                */ //comment section broke my shit!!!!!!! moved it to seperate method
+                //Copy then linear sort lowest to hightest. Ranking() funcation.
+                /*
+                Console.WriteLine("----------Ranking----------");
+                
+               
+                try
+                {
+                    double FirstPlace=0, SecondPlace = tabel[2].Age, ThirdPlace = tabel[2].Age;
+                    int FirstIndex = 0, SecondIndex = 0, ThirdIndex = 0;
+                    for (int i = 0; i < tabel.Length; i++) // finding first, second and third place linear sorting
+                    {
+                        /*
+                        if (tabel[i] != null)
+                        {
+                            if (tabel[i].Age < FirstPlace)
+                            {
+                                FirstPlace = tabel[i].Age;
+                                FirstIndex = i;
+                            }
+                            if (tabel[i].Age < SecondPlace && tabel[i].Age < FirstPlace)
+                            {
+                                SecondPlace = tabel[i].Age;
+                                SecondIndex = i;
+                            }
+                            if (tabel[i].Age < ThirdPlace && tabel[i].Age < SecondPlace)
+                            {
+                                ThirdPlace = tabel[i].Age;
+                                ThirdIndex = i;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Row {0} is empty", i + 1);
+                        }
+                        */
+                /*
+                if (tabel[i].Age < FirstPlace)
+                {
+                    ThirdPlace = SecondPlace;
+                    SecondPlace = FirstPlace;
+                    FirstPlace = tabel[i].Age;
+                    FirstIndex = i;
+                }
+                else if (tabel[i].Age < SecondPlace)
+                {
+                    ThirdPlace = SecondPlace;
+                    SecondPlace = tabel[i].Age;
+                    SecondIndex = i;
+                }
+                else if (tabel[i].Age < ThirdPlace)
+                {
+                    ThirdPlace = tabel[i].Age;
+                    ThirdIndex = i;
+                }
+
+            }
+
+            Console.WriteLine("1-First Place Goes To {0} at Record of {1}sec.\n2-Second Place Goes To {2} at Record of {3}sec.\n-3 Third Place Goes to {4} at Record of {5}sec.\n",
+                       tabel[FirstIndex].Name, tabel[FirstIndex].Time,
+                       tabel[SecondIndex].Name, tabel[SecondIndex].Time,
+                       tabel[ThirdIndex].Name, tabel[ThirdIndex].Time);
+        }
+        catch (NullReferenceException)
+        {
+            Console.WriteLine("The Tournament isn't Full thus can't make an accurate decession!!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            Console.WriteLine("There is less than three players to give ranking!!");
+        }
+        */
+/*checking for time not age dumbass!
+                             * plus i need to move the whole object not just the child {age or time or name}
+                            if (tmp[i].Age > tmp[j].Age)
+                            {
+                                tmp[10].Age = tmp[i].Age;
+                                tmp[i].Age = tmp[j].Age;
+                                tmp[j].Age = tmp[11].Age;
+
+                            }
+                            */ /*
+                    tabel[i].Age = randomAge;
+                    tabel[i].Time = randomTime;
+                    tabel[i].Name = "Debugging";
+                    */ /*
+                //tmp = tabel;
+                int rank = 0;
+                for (int i = 0; i < tabel.Length; i++)
+                {
+                    tmp[i] = tabel[i];
+                    
+                }
+                Console.WriteLine("Copy Done!!"); // Ghetto Debugging
+
+                Console.WriteLine("!!Ranking!!"); // Ghetto Debugging 
+                for (int i = 0; i < tmp.Length - 1 ; i++)
+                {
+                    for (int j = i + 1; j < tmp.Length - 1; j++)
+                    {
+                        /*checking for time not age dumbass!
+                         * plus i need to move the whole object not just the child {age or time or name}
+                        if (tmp[i].Age > tmp[j].Age)
+                        {
+                            tmp[10].Age = tmp[i].Age;
+                            tmp[i].Age = tmp[j].Age;
+                            tmp[j].Age = tmp[11].Age;
+
+                        }
+                        
+                        // checks for time and moves the whole object
+                        //Linear search >>
+
+                        if (tmp[i].Time > tmp[j].Time) 
+                        {
+                            var Tmp = tmp[i];
+                            tmp[i] = tmp[j];
+                            tmp[j] = Tmp;
+
+                        }
+                       
+
+                    }
+
+                    */﻿
                         /**
                         if (storage != null)  // trying to debugg async method (kml rn :( ) 
                         {
